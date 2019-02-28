@@ -1,0 +1,1695 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10"> <![endif]-->
+
+<html lang='en-us' prefix='og: http://ogp.me/ns#'>
+
+<head>
+    <meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcGV1ZWABABUFZbAAkOV1I="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,N=y.hash,this[u]=g.now()}function o(){M--,y.hash!==N&&i(0,!0);var t=g.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=g.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,g=t("loader");if(w[v]&&g.xhrWrappable){var b=t(10),x=t(11),E=t(8),O=t(6),P=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),S=j.get("tracer");t(15),g.features.spa=!0;var N,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(l,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),P.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),R.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),b.buffer([u]),x.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+s),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(8);var b=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,e){var n=t[0];n instanceof b&&i("bst",[n,e,this.bstStart,g.now()])}),a.on(m,function(t,e,n){this.bstStart=g.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(24)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(21);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(24)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(24)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-"),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(24)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(24),a=t("ee").get("promise"),s=i(a),c=t(21),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(24)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(24)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(24)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,b),b.prototype=l.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(e.cat=c.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),l=t(19),h=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,l&&(l>34||l<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<d;s++)e.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],24:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[n]];return d&&d.push([b,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},b={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(g,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+x.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(17),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}]},{},["loader",2,15,5,3,4]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" href="https://www.lightspeedhq.com/favicon.ico" type="image/x-icon"/>
+
+    <link rel="alternate" href="https://www.lightspeedhq.com/pos-system/" hreflang="en"/>
+<link rel="alternate" href="https://www.lightspeedhq.co.uk/pos-system/" hreflang="en-gb"/>
+<link rel="alternate" href="https://www.lightspeedhq.com/pos-system/" hreflang="en-us"/>
+<link rel="alternate" href="https://www.lightspeedhq.com/pos-system/" hreflang="en-ca"/>
+<link rel="alternate" href="https://www.lightspeedhq.com.au/pos-system/" hreflang="en-au"/>
+<link rel="alternate" href="https://www.lightspeedhq.com/pos-system/" hreflang="en-nz"/>
+
+    <meta name="p:domain_verify" content="5b33cd0530cb4d1818ee74ca3e7bdcb5"/>
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
+
+
+    <title>Choose the right POS system for your business | Lightspeed HQ</title>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- This site is optimized with the Yoast SEO Premium plugin v9.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Our POS system helps your business ! Get free onboarding, training, and 24/7 support from real people. Our POS system and solutions are trusted globally by independent retailers and restaurateurs"/>
+<link rel="canonical" href="https://www.lightspeedhq.com/pos-system/" />
+<link rel="publisher" href="https://plus.google.com/101112536203573848593"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Choose the right POS system for your business | Lightspeed HQ" />
+<meta property="og:description" content="Our POS system helps your business ! Get free onboarding, training, and 24/7 support from real people. Our POS system and solutions are trusted globally by independent retailers and restaurateurs" />
+<meta property="og:url" content="https://www.lightspeedhq.com/pos-system/" />
+<meta property="og:site_name" content="Lightspeed POS" />
+<meta property="og:image" content="https://assets.lightspeedhq.com/img/2018/07/c72ca78c-half_pos-systems_895x460-2.png" />
+<meta property="og:image:secure_url" content="https://assets.lightspeedhq.com/img/2018/07/c72ca78c-half_pos-systems_895x460-2.png" />
+<meta property="og:image:width" content="894" />
+<meta property="og:image:height" content="460" />
+<meta property="og:image:alt" content="the best pos system for restaurant" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Our POS system helps your business ! Get free onboarding, training, and 24/7 support from real people. Our POS system and solutions are trusted globally by independent retailers and restaurateurs" />
+<meta name="twitter:title" content="Choose the right POS system for your business | Lightspeed HQ" />
+<meta name="twitter:image" content="https://assets.lightspeedhq.com/img/2018/07/c72ca78c-half_pos-systems_895x460-2.png" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//www.lightspeedhq.com' />
+<link rel='dns-prefetch' href='//cdn.bizible.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Lightspeed POS &raquo; Feed" href="https://www.lightspeedhq.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lightspeed POS &raquo; Comments Feed" href="https://www.lightspeedhq.com/comments/feed/" />
+<link rel='stylesheet' id='main-css'  href='https://www.lightspeedhq.com/wp-content/themes/ls/prod/css/main.css?ver=1551385213' type='text/css' media='all' />
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1'></script>
+<link rel='https://api.w.org/' href='https://www.lightspeedhq.com/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.lightspeedhq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lightspeedhq.com%2Fpos-system%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.lightspeedhq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lightspeedhq.com%2Fpos-system%2F&#038;format=xml" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Lightspeed"});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P7NVFF');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+    <!--[if IE]>
+    <script src="./wp-content/themes/ls/prod/js/flexibility.js"></script>
+    <![endif]-->
+
+    <!--source: https://cdnjs.com/libraries/html5shiv-->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!--    BEGIN PHONE TRACKING SCRIPT-->
+    <!--  This is based on the new code here: https://support.google.com/google-ads/answer/6095883?co=ADWORDS.IsAWNCustomer%3Dtrue&hl=en&oco=0 -->
+    <script type="text/javascript">"use strict";function PhoneTrackingCallback(site_phone_number){return function(formatted_number,mobile_number){document.querySelectorAll(".js-phone-link").forEach(function(el){el&&(el.href="tel:"+mobile_number,el.innerHTML.trim()===site_phone_number.trim()&&(el.innerHTML="",el.appendChild(document.createTextNode(formatted_number))))})}}</script>
+    <!-- Global site tag (gtag.js) - Google Ads: 1015423443 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1015423443"></script>
+    <script> window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments); } gtag('js', new Date());gtag('config', 'AW-1015423443'); </script>
+    <!-- Phone Tracking Snippet -->
+    <script>
+        gtag('config', 'AW-1015423443/uDdTCPiQ8moQ08OY5AM', {'phone_conversion_number': '866-932-1801', 'phone_conversion_callback':PhoneTrackingCallback('866-932-1801') }) </script>
+    <!--    END PHONE TRACKING SCRIPT-->
+    <!-- Start Segment Code -->
+<script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load('2lSLrY3e5VMffdBioxocnqmrfIUmH1nn');
+  analytics.page();
+  }}();
+</script>
+<!-- Finish Segment Code -->
+<script type="application/javascript">var lexic_values=[{"message_text":"We\u2019re on it..."},{"message_text":"Almost there..."},{"message_text":"Fasten your seatbelt\u2026"},{"message_text":"All systems set to go\u2026"},{"message_text":"3...2...1\u2026"},{"message_text":"We have liftoff\u2026"}]</script><script>ls_Register=function(obj,val){ls_Register[obj]=val;}</script><script>ls_ajx_load_content={"hq":[{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-retail.html.twig","allow":{"pattern":"\/retail\/","flags":"","useGeo":{"division":"continent","target":["NA"]}}},{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-restaurant.html.twig","allow":{"pattern":"\/restaurant\/","flags":"","useGeo":{"division":"continent","target":["NA"]}}}],"couk":[{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-retail.html.twig","allow":{"pattern":"\/retail\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}},{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-restaurant.html.twig","allow":{"pattern":"\/restaurant\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}}],"frhq":[{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-retail.html.twig","allow":{"pattern":"\/retail\/","flags":"","useGeo":{"division":"continent","target":["NA"]}}},{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-restaurant.html.twig","allow":{"pattern":"\/restaurant\/","flags":"","useGeo":{"division":"continent","target":["NA"]}}}],"frbe":[{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-retail.html.twig","allow":{"pattern":"\/retail\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}},{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-restaurant.html.twig","allow":{"pattern":"\/restaurant\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}}],"nl":[{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-retail.html.twig","allow":{"pattern":"\/retail\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}},{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-restaurant.html.twig","allow":{"pattern":"\/restaurant\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}}],"be":[{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-retail.html.twig","allow":{"pattern":"\/retail\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}},{"name":"alert_bar","filename":"/alerts/alert-bar-march-promo-restaurant.html.twig","allow":{"pattern":"\/restaurant\/","flags":"","useGeo":{"division":"continent","target":["EU"]}}}],"default_configs":[{"theme":"ls","on_load_event":true,"controller":{"object":"AlertBarController","data":{"DOMinsert":{"target":"#content-wrapper","method":"insertAsFirstChild"}},"dependencies":[{"name":"cookieHandler","object":"CookieMonster"}]},"allow":{"pattern":"a^"}}]}</script></head>
+
+<body class="page-template page-template-page-templates page-template-master-page page-template-page-templatesmaster-page-php page page-id-43679 group-blog" data-product="other" data-chat="true" data-sticky_cta="true" data-domain="hq" data-goal-type="Other" data-chat-type="drift">
+
+
+<div id="page" class="hfeed site">
+
+    <div id="content-wrapper">
+        <!-- MAIN NAVIGATION START -->
+        <!-- Navigation: MainGnT -->
+    
+<header role="banner" class="main-site-header-gnt">
+    <div class="navigation-gnt-desktop gb-flex gb-flex--center-vertical">
+    <a class="navigation-gnt__logo" href="https://www.lightspeedhq.com/" rel="home" title="Lightspeed POS">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 475 110"><path class="flame" d="m36.9.9 5 8.7c1 1.8 1 4 0 5.8l-29.8 51.7 14.1 24.4c2.2 3.8 6.3 6.2 10.7 6.2s8.5-2.4 10.7-6.2l14.1-24.4-3.7-6.6-16 27.7c-1 1.8-3 2.9-5 2.9-2.1 0-4-1.1-5-2.9l-12.3-21.1 27.7-48 5 8.7c1 1.8 1 4 0 5.8l-19.3 33.5 3.8 6.6 21-36.4 13.8 23.9c2.1 3.7 2.1 8.2 0 11.9l-14 24.3c-2.1 3.7-8.8 12-20.8 12s-18.6-8.3-20.8-12l-14-24.3c-2.1-3.7-2.1-8.2 0-11.9z"/><g class="text" transform="translate(102 25)"><path d="m0 1.8h9.7v57.3h-9.7z"/><circle cx="22.7" cy="6.6" r="5.7"/><path d="m17.8 19.3h9.8v39.8h-9.8z"/><path d="m53.3 18.3c-11.1 0-20.1 7.8-20.1 20.2s7.8 20 20.2 20c4.9 0 10.1 2.5 10.1 8s-4.4 8.6-10.1 8.6-10.4-3.4-10.4-8.6h-9.8c0 10.7 8.6 17.8 20.2 17.8 11.5 0 19.9-6.8 19.9-17.8 0-5.1-1.6-9.9-8.2-13.2 6.5-3 8.4-9.9 8.4-14.9 0-12.3-9.1-20.1-20.2-20.1zm.1 32.1c-5.7 0-10.4-4.9-10.4-11.9 0-6.9 4.7-12 10.4-12s10.3 5.2 10.3 12c0 6.9-4.7 11.9-10.3 11.9z"/><path d="m101.9 18.3c-4.5 0-8.8 1.4-12.4 5.9v-22.5h-9.8v57.3h9.8v-20.2c0-5.9 4-10.8 9.8-10.8 5.2 0 9 3.1 9 10.3v20.7h9.8v-21.4c.1-11.7-4.9-19.3-16.2-19.3z"/><path d="m142 52.3c-1.2 0-2.2-.4-2.8-1.2s-.9-2-.9-3.8v-19.6h7.9l.9-8.5h-8.7v-10.9l-9.9 1.1v9.9h-7.5v8.5h7.5v19.8c0 4.1 1 7.2 2.9 9.3s4.8 3.2 8.5 3.2c1.7 0 3.3-.2 5-.7s3.2-1.2 4.5-2.1l-3.4-6.3c-1.3.9-2.7 1.3-4 1.3z"/><path d="m182.3 37.7c-4-2.5-8.7-2.8-13.3-3.1-2.7-.2-6.8-.8-6.8-4.3 0-2.5 2.6-3.9 7.3-3.9 3.8 0 7.1.9 9.9 3.5l5.5-6.4c-4.6-4-9.3-5.2-15.6-5.2-7.3 0-16.9 3.2-16.9 12.4 0 3.8 2 7.3 5.3 9.3 3.7 2.3 8.5 2.6 12.6 3.1 2.8.3 7.4 1 6.6 4.9-.5 2.7-3.8 3.5-6.1 3.6-2.5.1-5-.1-7.5-.7-2.6-.7-4.7-1.9-7-3.4l-5 6.3c.3.2.6.5.6.5 6.4 5.3 15.3 7 23.4 5.2 6.1-1.4 11.3-5.8 11.3-12.4.2-3.7-1-7.4-4.3-9.4z"/><path d="m214.6 18.3c-4.5 0-9.8 1.9-12.9 6.3l-.3-5.4h-9.5v57.3l9.8-1.1v-21c2.8 4.3 8.9 5.7 13.1 5.7 12.7 0 20.1-9.5 20.1-21 0-11.7-8.1-20.8-20.3-20.8zm-.8 33.3c-6.7 0-11.2-6.1-11.2-12.3s4.2-12.8 11.2-12.8c7.1 0 11.2 6.7 11.2 12.8.1 6.2-4.5 12.3-11.2 12.3z"/><path d="m247.7 42.7c1.1 4.7 5.4 8.8 12.4 8.8 3.6 0 8.4-1.8 10.7-4.1l6.3 6.2c-4.2 4.3-11.1 6.4-17.1 6.4-12.4 0-21.4-8.2-21.4-20.9 0-12 9.3-20.8 20.7-20.8 12 0 22 8.2 21 24.4zm23.1-7.5c-1.1-4.7-5.8-8.8-11.5-8.8-5.3 0-10.2 3.6-11.6 8.8z"/><path d="m293.1 42.7c1.1 4.7 5.4 8.8 12.4 8.8 3.6 0 8.4-1.8 10.7-4.1l6.3 6.2c-4.2 4.3-11.1 6.4-17.1 6.4-12.4 0-21.4-8.2-21.4-20.9 0-12 9.3-20.8 20.7-20.8 12 0 22 8.2 21 24.4zm23.2-7.5c-1.1-4.7-5.8-8.8-11.5-8.8-5.3 0-10.2 3.6-11.6 8.8z"/><path d="m349.4 60.1c4.5 0 9.8-1.9 12.9-6.3l.3 5.3h9.5v-57.3h-9.8v22.2c-2.8-4.3-9-5.6-13.2-5.6-12.7 0-20 9.4-20 21s8.1 20.7 20.3 20.7zm.7-33.3c6.7 0 11.2 6.1 11.2 12.3s-4.2 12.8-11.2 12.8c-7.1 0-11.2-6.7-11.2-12.8 0-6.2 4.5-12.3 11.2-12.3z"/></g></svg>
+</a> 
+<nav class="navigation-gnt-desktop__nav gb-flex gb-flex--center-vertical">
+    
+<ul class="navigation-gnt-desktop__item-group navigation-gnt-desktop__base-product gb-flex gb-flex--center-vertical">
+                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--not-active
+                navigation-gnt-desktop__parent-item navigation-gnt-desktop__parent-item--primary">
+                <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/retail/">
+    Retail
+</a>
+            </li>
+            
+                    
+                                                        <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--not-active
+                navigation-gnt-desktop__parent-item navigation-gnt-desktop__parent-item--secondary">
+                <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/restaurant/">
+    Restaurant
+</a>
+            </li>
+            
+                    
+                                                                        </ul>     <ul class="navigation-gnt-desktop__item-group navigation-gnt-desktop__utility-links gb-flex gb-flex--center-vertical">
+    
+        <ul class="navigation-gnt-desktop__item-group navigation-gnt-desktop__more-dropdown">
+    <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--dropdown">
+        <button class="navigation-gnt-desktop__item__link navigation-gnt-desktop__item__link--dropdown
+        navigation-gnt-desktop__item__link--more-button">
+            More
+        </button>
+        <ul class="navigation-gnt-desktop__item-group navigation-gnt-desktop__sub-links">
+                                                                                                                                    <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--not-active">
+    <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/about/">
+    About
+</a>
+</li>
+
+                                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--not-active">
+    <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/blog/">
+    Blog
+</a>
+</li>
+
+                                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--not-active">
+    <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/support/">
+    Support
+</a>
+</li>
+
+                                                                </ul>
+    </li>
+</ul>
+
+             
+             
+             
+                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--is-utility navigation-gnt-desktop__item--not-active
+                navigation-gnt-desktop__item--include-in-dropdown">
+                <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/about/">
+    About
+</a>
+            </li>
+         
+                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--is-utility navigation-gnt-desktop__item--not-active
+                navigation-gnt-desktop__item--include-in-dropdown">
+                <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/blog/">
+    Blog
+</a>
+            </li>
+         
+                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--is-utility navigation-gnt-desktop__item--not-active
+                navigation-gnt-desktop__item--include-in-dropdown">
+                <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/support/">
+    Support
+</a>
+            </li>
+         
+                                                <li class="navigation-gnt-desktop__item navigation-gnt-desktop__item--is-utility navigation-gnt-desktop__item--not-active
+                navigation-gnt-desktop__item--exclude-from-dropdown">
+                <a class="navigation-gnt-desktop__item__link gb-flex gb-flex--center-vertical" href="/login/">
+    Login
+</a>
+            </li>
+         
+    
+</ul>
+
+    <div class="navigation-gnt-desktop__item navigation-gnt-desktop__phone-number gb-flex gb-flex--center-vertical">
+        <a class="navigation-gnt-desktop__item__link navigation-gnt-desktop__phone-number__link js-phone-link gb-flex gb-flex--center-vertical" href="tel:8669321801">
+    866-932-1801
+</a>
+    </div>
+
+<div class="navigation-gnt-desktop__cta">
+    <a href="/trial/?main-nav" rel="nofollow" class="navigation-gnt-desktop__cta__btn gb-button gb-button__cta gb-button__cta--highlight" >Free trial</a>
+</div>
+ </nav></div>    <div class="navigation-gnt-mobile">
+    <div class="navigation-gnt-mobile__header">
+    
+    <a class="navigation-gnt__logo" href="https://www.lightspeedhq.com/" rel="home" title="Lightspeed POS">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 475 110"><path class="flame" d="m36.9.9 5 8.7c1 1.8 1 4 0 5.8l-29.8 51.7 14.1 24.4c2.2 3.8 6.3 6.2 10.7 6.2s8.5-2.4 10.7-6.2l14.1-24.4-3.7-6.6-16 27.7c-1 1.8-3 2.9-5 2.9-2.1 0-4-1.1-5-2.9l-12.3-21.1 27.7-48 5 8.7c1 1.8 1 4 0 5.8l-19.3 33.5 3.8 6.6 21-36.4 13.8 23.9c2.1 3.7 2.1 8.2 0 11.9l-14 24.3c-2.1 3.7-8.8 12-20.8 12s-18.6-8.3-20.8-12l-14-24.3c-2.1-3.7-2.1-8.2 0-11.9z"/><g class="text" transform="translate(102 25)"><path d="m0 1.8h9.7v57.3h-9.7z"/><circle cx="22.7" cy="6.6" r="5.7"/><path d="m17.8 19.3h9.8v39.8h-9.8z"/><path d="m53.3 18.3c-11.1 0-20.1 7.8-20.1 20.2s7.8 20 20.2 20c4.9 0 10.1 2.5 10.1 8s-4.4 8.6-10.1 8.6-10.4-3.4-10.4-8.6h-9.8c0 10.7 8.6 17.8 20.2 17.8 11.5 0 19.9-6.8 19.9-17.8 0-5.1-1.6-9.9-8.2-13.2 6.5-3 8.4-9.9 8.4-14.9 0-12.3-9.1-20.1-20.2-20.1zm.1 32.1c-5.7 0-10.4-4.9-10.4-11.9 0-6.9 4.7-12 10.4-12s10.3 5.2 10.3 12c0 6.9-4.7 11.9-10.3 11.9z"/><path d="m101.9 18.3c-4.5 0-8.8 1.4-12.4 5.9v-22.5h-9.8v57.3h9.8v-20.2c0-5.9 4-10.8 9.8-10.8 5.2 0 9 3.1 9 10.3v20.7h9.8v-21.4c.1-11.7-4.9-19.3-16.2-19.3z"/><path d="m142 52.3c-1.2 0-2.2-.4-2.8-1.2s-.9-2-.9-3.8v-19.6h7.9l.9-8.5h-8.7v-10.9l-9.9 1.1v9.9h-7.5v8.5h7.5v19.8c0 4.1 1 7.2 2.9 9.3s4.8 3.2 8.5 3.2c1.7 0 3.3-.2 5-.7s3.2-1.2 4.5-2.1l-3.4-6.3c-1.3.9-2.7 1.3-4 1.3z"/><path d="m182.3 37.7c-4-2.5-8.7-2.8-13.3-3.1-2.7-.2-6.8-.8-6.8-4.3 0-2.5 2.6-3.9 7.3-3.9 3.8 0 7.1.9 9.9 3.5l5.5-6.4c-4.6-4-9.3-5.2-15.6-5.2-7.3 0-16.9 3.2-16.9 12.4 0 3.8 2 7.3 5.3 9.3 3.7 2.3 8.5 2.6 12.6 3.1 2.8.3 7.4 1 6.6 4.9-.5 2.7-3.8 3.5-6.1 3.6-2.5.1-5-.1-7.5-.7-2.6-.7-4.7-1.9-7-3.4l-5 6.3c.3.2.6.5.6.5 6.4 5.3 15.3 7 23.4 5.2 6.1-1.4 11.3-5.8 11.3-12.4.2-3.7-1-7.4-4.3-9.4z"/><path d="m214.6 18.3c-4.5 0-9.8 1.9-12.9 6.3l-.3-5.4h-9.5v57.3l9.8-1.1v-21c2.8 4.3 8.9 5.7 13.1 5.7 12.7 0 20.1-9.5 20.1-21 0-11.7-8.1-20.8-20.3-20.8zm-.8 33.3c-6.7 0-11.2-6.1-11.2-12.3s4.2-12.8 11.2-12.8c7.1 0 11.2 6.7 11.2 12.8.1 6.2-4.5 12.3-11.2 12.3z"/><path d="m247.7 42.7c1.1 4.7 5.4 8.8 12.4 8.8 3.6 0 8.4-1.8 10.7-4.1l6.3 6.2c-4.2 4.3-11.1 6.4-17.1 6.4-12.4 0-21.4-8.2-21.4-20.9 0-12 9.3-20.8 20.7-20.8 12 0 22 8.2 21 24.4zm23.1-7.5c-1.1-4.7-5.8-8.8-11.5-8.8-5.3 0-10.2 3.6-11.6 8.8z"/><path d="m293.1 42.7c1.1 4.7 5.4 8.8 12.4 8.8 3.6 0 8.4-1.8 10.7-4.1l6.3 6.2c-4.2 4.3-11.1 6.4-17.1 6.4-12.4 0-21.4-8.2-21.4-20.9 0-12 9.3-20.8 20.7-20.8 12 0 22 8.2 21 24.4zm23.2-7.5c-1.1-4.7-5.8-8.8-11.5-8.8-5.3 0-10.2 3.6-11.6 8.8z"/><path d="m349.4 60.1c4.5 0 9.8-1.9 12.9-6.3l.3 5.3h9.5v-57.3h-9.8v22.2c-2.8-4.3-9-5.6-13.2-5.6-12.7 0-20 9.4-20 21s8.1 20.7 20.3 20.7zm.7-33.3c6.7 0 11.2 6.1 11.2 12.3s-4.2 12.8-11.2 12.8c-7.1 0-11.2-6.7-11.2-12.8 0-6.2 4.5-12.3 11.2-12.3z"/></g></svg>
+</a>     
+    <div class="navigation-gnt-mobile__header__right">
+                    <a class="js-phone-link navigation-gnt-mobile__header__phone" href="tel:8669321801">
+                <svg viewBox="0 0 18.008 17.932" xmlns="http://www.w3.org/2000/svg"><path d="m17.588 15.249-.966 1.61a1.643 1.643 0 0 1 -.966.751c-1.952.535-6.691 1.134-11.85-4.026s-4.273-9.609-3.737-11.561a1.629 1.629 0 0 1 .751-.966l1.609-.967a.483.483 0 0 1 .654.149l1.394 2.1 1.171 1.755a.488.488 0 0 1 -.108.654l-1.44 1.123a1.108 1.108 0 0 0 -.3 1.423l.12.206a13.472 13.472 0 0 0 2.75 3.511 13.472 13.472 0 0 0 3.509 2.751l.208.115a1.107 1.107 0 0 0 1.424-.294l1.123-1.442a.492.492 0 0 1 .654-.108l3.851 2.567a.473.473 0 0 1 .149.649z" transform="translate(.35 -.021)"/></svg>
+            </a>
+                <div class="navigation-gnt-mobile__header__burger" data-navigation-gnt-mobile="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+    <div class="navigation-gnt-mobile__container" data-navigation-gnt-mobile="overlay">
+    <nav class="navigation-gnt-mobile__sidebar">
+            <div class="navigation-gnt-mobile__menu" data-navigation-gnt-mobile="menu">
+        <ul class="navigation-gnt-mobile__list">
+                            
+                                    
+                                                                                
+                    <li class="navigation-gnt-mobile__menu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__menu__link" href="/retail/">
+    Retail
+</a>
+                        
+                                                        <div class="navigation-gnt-mobile__submenu">
+        <ul class="navigation-gnt-mobile__list">
+                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--no-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="/retail/">
+    Overview
+</a>
+                                            </li>
+                                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="#">
+    Products
+</a>
+                                                     <div class="navigation-gnt-mobile__subsubmenu">
+    <ul class="navigation-gnt-mobile__list">
+                                                                    
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--bold" href="/pos/retail/">
+    Point of sale
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--bold" href="/ecommerce/">
+    eCommerce
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/loyalty/">
+    Loyalty
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/payments/">
+    Payments
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/analytics/">
+    Analytics
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/accounting/">
+    Accounting
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/hardware/">
+    Hardware
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/integrations/">
+    Integrations
+</a>
+                </li>
+                                                                </ul>
+</div>
+                                            </li>
+                                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="#">
+    Business types
+</a>
+                                                     <div class="navigation-gnt-mobile__subsubmenu">
+    <ul class="navigation-gnt-mobile__list">
+                                                                    
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/apparel/">
+    Apparel
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/jewellery-store-pos/">
+    Jewelry
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/bike-shop/">
+    Bike
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/pet-shop-point-of-sale/">
+    Pet &amp; supplies
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/electronics-store-pos/">
+    Electronics
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/sporting-goods-point-of-sale/">
+    Sporting goods
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/home-decor-store-pos/">
+    Home decor
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/vape-store-pos/">
+    Vape
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/business-types/">
+    More
+</a>
+                </li>
+                                            </ul>
+</div>
+                                            </li>
+                                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="#">
+    Pricing
+</a>
+                                                     <div class="navigation-gnt-mobile__subsubmenu">
+    <ul class="navigation-gnt-mobile__list">
+                                                                    
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/pricing/">
+    Point of Sale
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/ecommerce/pricing/">
+    eCommerce
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/retail/loyalty/pricing/">
+    Loyalty
+</a>
+                </li>
+                                                                                                                                                                    </ul>
+</div>
+                                            </li>
+                                    </ul>
+    </div>
+                                            </li>
+                                            
+                                    
+                                                                                
+                    <li class="navigation-gnt-mobile__menu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__menu__link" href="/restaurant/">
+    Restaurant
+</a>
+                        
+                                                        <div class="navigation-gnt-mobile__submenu">
+        <ul class="navigation-gnt-mobile__list">
+                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--no-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="/restaurant/">
+    Overview
+</a>
+                                            </li>
+                                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="#">
+    Products
+</a>
+                                                     <div class="navigation-gnt-mobile__subsubmenu">
+    <ul class="navigation-gnt-mobile__list">
+                                                                    
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--bold" href="/pos/restaurant/">
+    Point of sale
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/loyalty/">
+    Loyalty
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/accounting/">
+    Accounting
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/self-order-menu/">
+    Self Order Menu
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/kitchen-display-system/">
+    Kitchen Display System
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/customer-facing-display/">
+    Customer Facing Display
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/hardware/">
+    Hardware
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/integrations/">
+    Integrations
+</a>
+                </li>
+                                                                </ul>
+</div>
+                                            </li>
+                                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="#">
+    Business Types
+</a>
+                                                     <div class="navigation-gnt-mobile__subsubmenu">
+    <ul class="navigation-gnt-mobile__list">
+                                                                    
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/full-service-pos-software/">
+    Full service
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/bar-pos-system/">
+    Bar/Nightclub
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/quick-service-restaurant-pos/">
+    Quick service
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/bakery-and-cafe-pos-system/">
+    Cafe
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/hotel-epos/">
+    Hotel restaurant
+</a>
+                </li>
+                                                                                                                            </ul>
+</div>
+                                            </li>
+                                                                                                                            
+                    <li class="navigation-gnt-mobile__submenu__item navigation-gnt-mobile__item
+                    navigation-gnt-mobile__item--has-subnav navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__submenu__link" href="#">
+    Pricing
+</a>
+                                                     <div class="navigation-gnt-mobile__subsubmenu">
+    <ul class="navigation-gnt-mobile__list">
+                                                                    
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/pricing/">
+    Point of Sale
+</a>
+                </li>
+                                                                                
+                <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                    <a class="navigation-gnt-mobile__subsubmenu__link navigation-gnt-mobile__subsubmenu__link--not-bold" href="/pos/restaurant/loyalty/pricing/">
+    Loyalty
+</a>
+                </li>
+                                                                                                                                                                                        </ul>
+</div>
+                                            </li>
+                                    </ul>
+    </div>
+                                            </li>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                    </ul>
+    </div>
+                    <div class="navigation-gnt-mobile__trial">
+                <a href="tel:8669321801" rel="nofollow" class="navigation-gnt-mobile__trial__button gb-button gb-button__cta gb-button__cta--large gb-button__cta--highlight js-phone-link" >Call us</a>
+            </div>
+                    <div class="navigation-gnt-mobile__utility">
+        <ul class="navigation-gnt-mobile__list">
+                                                                                                                                                        <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__utility__link" href="/about/">
+    About
+</a>
+                    </li>
+                                                                                    <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__utility__link" href="/blog/">
+    Blog
+</a>
+                    </li>
+                                                                                    <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__utility__link" href="/support/">
+    Support
+</a>
+                    </li>
+                                                                                    <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__utility__link" href="/careers/">
+    Careers
+</a>
+                    </li>
+                                                                                    <li class="navigation-gnt-mobile__item navigation-gnt-mobile__item--not-active">
+                        <a class="navigation-gnt-mobile__utility__link" href="/login/">
+    Login
+</a>
+                    </li>
+                                    </ul>
+    </div>
+        <ul class="navigation-gnt-mobile__list">
+    <li class="navigation-gnt-mobile__item local-flag flag-us">
+        <a href="#" class="navigation-gnt-mobile__utility__link flag-link">US(EN)</a>
+    </li>
+</ul>
+
+<div class="language-selector">
+    <ul id="menu-language-selector-1" class="menu">
+                    <li class="local-flag flag-uk menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.co.uk">UK(EN)</a>
+            </li>
+                    <li class="local-flag flag-ca menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.com">CA(EN)</a>
+            </li>
+                    <li class="local-flag flag-au menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.com.au">AU(EN)</a>
+            </li>
+                    <li class="local-flag flag-qc menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//fr.lightspeedhq.com">CA(FR)</a>
+            </li>
+                    <li class="local-flag flag-fr menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//fr.lightspeedhq.be">FR(FR)</a>
+            </li>
+                    <li class="local-flag flag-nl menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.nl">NL(NL)</a>
+            </li>
+                    <li class="local-flag flag-be menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.be">BE(NL)</a>
+            </li>
+                    <li class="local-flag flag-be menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//fr.lightspeedhq.be">BE(FR)</a>
+            </li>
+                    <li class="local-flag flag-de menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.de">DE(DE)</a>
+            </li>
+                    <li class="local-flag flag-mx menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                <a href="//www.lightspeedhq.mx">MX(ES)</a>
+            </li>
+            </ul>
+</div>
+    </nav>
+</div>
+</div>
+</header>        <!-- MAIN NAVIGATION END -->
+        <div id="content" class="site-content">
+<!-- @hero_divided  -->
+                            
+                                                                                       
+                
+                                        
+                
+            
+    
+
+    
+<section  class="hero-divided   no-spacing  gb-background-image"  >
+            
+                    <div class="container--full">
+                        
+                                    <style>
+                        :root {
+                            --hero-divided__background-image--desktop: url('https://www.lightspeedhq.com/wp-content/uploads/2018/05/Header_verifon_1268x672_v4.jpg');
+                            --hero-divided__background-image--mobile: url('https://www.lightspeedhq.com/wp-content/uploads/2018/05/Header_verifon_1268x672_v4.jpg');
+                        }
+                    </style>
+    
+    
+        <div class="hero-divided__background-image hero-divided__background-image--desktop gb-background-image">
+        </div>        
+        <section class="row hero-divided__container">
+            <div class="hero-divided__container__content hero-divided__container__content--overlay--light
+                     gb-spacing col-xs-12 col-sm-7">
+                
+<header class="hero-divided__header">
+            <h1 class="hero-divided__header__title col-xs-12">The POS system to grow your business</h1>
+        </header>
+
+
+
+                    <div class="gb-button-container gb-button-container--left">
+            <a class="gb-button-cta-featured-primary gb-button-cta-featured-primary--on-light gb-button-cta-featured-primary--flexible gb-button-cta-featured-primary--left do-not-hide-on-mobile"
+               title="Try it for free"
+               href="/pos/retail/register-free-retail-pos-trial/" 
+               data-ctaposition="hero">
+                Try it for free
+            </a>
+            <a class="gb-button-cta-featured-secondary gb-button-cta-featured-secondary--on-light gb-button-cta-featured-secondary--flexible gb-button-cta-featured-secondary--left "
+               title="Talk to an expert"
+               href="/pos/retail/talk-to-a-pos-expert/"
+               data-ctaposition="hero">
+                Talk to an expert
+            </a>
+        </div>
+    
+            </div>
+        </section>
+    
+        <div class="hero-divided__background-image hero-divided__background-image--mobile gb-background-image">
+        </div>        
+        
+
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="whatispos" class="empty-span"></span><!-- @full_width_module  -->
+
+    
+    
+
+    
+    
+    
+    
+<section id=full_width_module-3 class="full-width-module gb-background-color--lightest no-background-image with-overlay gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="content-wrapper col-xs-12 col-sm-8 center">
+            
+        
+                <h2 class="full-width-title dark  ">
+                            What is a point of sale system?
+                   </h2>
+        
+                <p
+    
+                                    class="full-width-subtext dark ">
+                            Traditionally a system for processing sales, today’s Point of Sale systems do so much more. Although transactions are processed on a POS system, restaurants and retail stores now use POS systems as business management tools. A point of system can provide the data you need to make better business decisions, help you improve the customer experience, automate repetitive tasks and streamline daily processes. Opening your first location? Switching from another system? A POS system is the tool that can help your business grow.<br />
+<br />
+POS systems today offer many features, but Lightspeed’s systems offer something truly unique. Cloud-based and mobile, our POS systems help retailers and restaurateurs bring their customer experience to the next level. <br />
+
+                        </p>
+    
+        
+    </div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="retailpossystem" class="empty-span"></span><!-- @half_width_module_with_quote  -->
+    
+                        
+                                
+                                                                            
+                        
+        
+        
+    
+
+    
+<section  class="half-width-module-with-quote  gb-background-color--lightest  gb-section-spacing gb-background-image--min-height gb-background-image"  >
+            
+                    <div class="container--full">
+                    
+    <section class="container--full half-width-module-with-quote__wrapper half-width-module-with-quote__wrapper--align-middle">
+        <div class="col-xs-12 col-sm-6 col-md-7 image-bleed">
+                
+                        
+    <div class="half-width-module-with-quote__media">
+        <figure class="half-width-module-with-quote__media__item half-width-module-with-quote__media__item--image">
+            <img data-src="https://assets.lightspeedhq.com/img/2018/07/600f98d3-half_pos-systems_895x460-1b.png" alt="" class="half-width-module-with-quote__image">
+        </figure>
+    </div>
+    
+        </div>
+        <div class="col-xs-11 col-xs-push-1 col-sm-5 col-md-4 col-sm-push-0 col-sm-pull-1">
+                <h2 class="half-width-module-with-quote__title">Retail POS system</h2>
+    <p class="half-width-module-with-quote__paragraph">For retailers, our POS offers many elements not found in other systems. We offer the opportunity to sell online and in a brick-and-mortar from one system. Whereas other POS systems may have reporting tools, our system offers deep analytics that provide actionable data that’ll help retailers better manage and grow their business. Our progressive inventory management tools such as integrated catalogs and preset reorder points are sure to streamline business practices for all retailers.</p>
+
+                
+            <div class="gb-button-container gb-button-container--left gb-button-container--center-mobile">
+            <a class="gb-button-jumpoff gb-button-jumpoff--left "
+               title="Retail POS" href="/pos/retail/">Retail POS</a>
+        </div>
+    
+
+
+
+<section class="half-width-module-with-quote__option">
+        
+                    
+                        
+    </section>        </div>
+    </section>
+    
+    
+
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="retailpossystemsfeatures" class="empty-span"></span><!-- @full_width_module  -->
+
+    
+    
+
+    
+    
+    
+    
+<section id=full_width_module-6 class="full-width-module gb-background-color--lightest no-background-image with-overlay gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="content-wrapper col-xs-12 col-sm-8 center">
+            
+        
+                <h2 class="full-width-title dark  gb-title--emphasis">
+                            Must-have Retail POS system features
+                   </h2>
+        
+        
+        
+    </div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section><!-- @faq  -->
+        
+    
+
+    
+<section  class="module-faq   gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-centered">
+            <div class="module-faq__accordion" data-js="accordion">
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Omnichannel retailing</h4>
+                        <p class="module-faq__answer">Sell online and in-store from one platform, centralizing your customer data, sales data and inventory data. What does that mean for you? One source of information to see exactly how all sales channels are performing and all customers shopping on your sales channels, so you avoid the confusion brought on by using systems that aren’t integrated. <a href="/pos/retail/features/" target="_blank">Learn more</a></p>
+                    </div>
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Reporting and analytics</h4>
+                        <p class="module-faq__answer">The data retailers have to base their decisions on is critical. Whether you have one or several stores, your data remains centralized in a single platform with Lightspeed. Knowing which inventory is selling, which isn’t, which employees sell the most and at what periods, may change the entire direction your business takes. Although most POS systems offer some sort of reports, Lightspeed’s reporting and analytics tools are advanced and offer true insight into the details of your store. <a href="/pos/retail/features/" target="_blank">Learn more</a> <br />
+</p>
+                    </div>
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Inventory management</h4>
+                        <p class="module-faq__answer">Your inventory is the cornerstone of your business. Managing that inventory properly is a major part of ensuring that your store is successful, and our POS can help you do just that. From creating purchase orders directly in the system to tracking serial numbers and unit costs, and establishing stock reorder points to know when you should send a new order to your vendors — you’ll ensure you always have the right items on your shelves. <a href="/pos/retail/features/" target="_blank">Learn more</a></p>
+                    </div>
+                            </div>
+        </div>
+    </div>
+    
+
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="restaurantpossystem" class="empty-span"></span><!-- @half_width_module_with_quote  -->
+    
+                        
+                                        
+                                                                                        
+                        
+        
+        
+    
+
+    
+<section  class="half-width-module-with-quote half-width-module-with-quote--is-odd gb-background-color--lightest  gb-section-spacing gb-background-image--min-height gb-background-image"  >
+            
+                    <div class="container--full">
+                    
+    <section class="container--full half-width-module-with-quote__wrapper half-width-module-with-quote__wrapper--align-middle">
+        <div class="col-xs-12 col-sm-6 col-md-7 image-bleed">
+                
+                        
+    <div class="half-width-module-with-quote__media">
+        <figure class="half-width-module-with-quote__media__item half-width-module-with-quote__media__item--image">
+            <img data-src="https://assets.lightspeedhq.com/img/2018/07/c72ca78c-half_pos-systems_895x460-2.png" alt="" class="half-width-module-with-quote__image">
+        </figure>
+    </div>
+    
+        </div>
+        <div class="col-xs-11 col-sm-5 col-md-4 col-xs-push-1">
+                <h2 class="half-width-module-with-quote__title">Restaurant POS systems</h2>
+    <p class="half-width-module-with-quote__paragraph">Lightspeed stands out from other POS systems by simplifying the work of restaurateurs and their staff. Whether you have a cafe, a QSR business, a stand-alone restaurant or a restaurant based in a hotel, our system simplifies the complex and saves you time at the end of a long day. Plus, we offer incredible and useful add-ons such as a kitchen display and kiosk option that’ll make running your business even easier.</p>
+
+                
+            <div class="gb-button-container gb-button-container--left gb-button-container--center-mobile">
+            <a class="gb-button-jumpoff gb-button-jumpoff--left "
+               title="Restaurant POS" href="/pos/restaurant/ ">Restaurant POS</a>
+        </div>
+    
+
+
+
+<section class="half-width-module-with-quote__option">
+        
+                    
+                        
+    </section>        </div>
+    </section>
+    
+    
+
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="resaurantpossystemsfeatures" class="empty-span"></span><!-- @full_width_module  -->
+
+    
+    
+
+    
+    
+    
+    
+<section id=full_width_module-9 class="full-width-module gb-background-color--lightest no-background-image with-overlay gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="content-wrapper col-xs-12 col-sm-8 center">
+            
+        
+                <h2 class="full-width-title dark  gb-title--emphasis">
+                            Must-have Restaurant POS system features
+                   </h2>
+        
+        
+        
+    </div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section><!-- @faq  -->
+        
+    
+
+    
+<section  class="module-faq   gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-centered">
+            <div class="module-faq__accordion" data-js="accordion">
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Adjustable floor layout</h4>
+                        <p class="module-faq__answer">Nothing ever stays the same for long — as the evening progresses, your floor layout may change. Our POS system floor layout is easily adjustable (simply tap and drag) so your staff knows exactly where to bring the orders. <a href="/pos/restaurant/features/" target="_blank">Learn more</a></p>
+                    </div>
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Tableside ordering and payments</h4>
+                        <p class="module-faq__answer">The experience you give your guests can make or break your business. With Lightspeed’s POS, your wait staff take orders at the table and send them directly to the kitchen, bar or salad station, so the preparation can start before the server has even left the customer’s side. Not only does this speed up the time it will take for them to get their order, but you'll eliminate mistakes. When the meal’s over, your staff can take payments wherever patrons happen to be (at the table? at the bar?) and quickly split or combine bills. <a href="/pos/restaurant/features/" target="_blank">Learn more</a></p>
+                    </div>
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Cloud-based, mobile, system</h4>
+                        <p class="module-faq__answer">With a cloud-based system, your data is available to you whether you’re at work, at home, or on the road. Access your end-of-day reports and sales data and employee information and even make menu adjustments in minutes from anywhere you happen to be. <a href="/pos/restaurant/features/" target="_blank">Learn more</a></p>
+                    </div>
+                                    <div class="module-faq__panel">
+                        <h4 class="module-faq__question">Keep running regardless of your internet connection</h4>
+                        <p class="module-faq__answer">In the event your internet connection goes down, our restaurant POS system offers a local server that saves all your data, so you can keep running your restaurant efficiently and reliably. Once your internet connection comes back, your saved data is pushed to the cloud.</p>
+                    </div>
+                            </div>
+        </div>
+    </div>
+    
+
+ </div>
+</section><!-- @html_module  -->
+            
+    
+
+    
+<section  class="html white  no-spacing  gb-background-image"  >
+            
+                    <div class="container--full">
+                        <div class="row">
+            <div class="col-xs-12">
+        <br><div class="text-center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xCFqF6c_3WY" frameborder="0" allowfullscreen></iframe>
+</div>
+    
+
+        </div>
+    </div>
+ </div>
+</section><!-- @full_width_module  -->
+
+    
+    
+
+    
+    
+    
+    
+<section id=full_width_module-12 class="full-width-module gb-background-color--lightest no-background-image with-overlay gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="content-wrapper col-xs-12 col-sm-8 center">
+            
+        
+                <h2 class="full-width-title dark  ">
+                            Ready to get started?
+                   </h2>
+        
+        
+                                                    <div class="gb-button-container gb-button-container--center __parent">
+            <a class="gb-button-cta-featured-primary gb-button-cta-featured-primary--on-light
+       gb-button-cta-featured-primary--flexible gb-button-cta-featured-primary--center "
+               title="Start your free trial" href="/trial/" target=""
+               data-ctaposition="body">
+                Start your free trial
+            </a>
+        </div>
+    
+            
+    </div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="ipadpossystem" class="empty-span"></span><!-- @full_width_module  -->
+
+    
+    
+
+    
+    
+    
+    
+<section id=full_width_module-15 class="full-width-module gb-background-color--lightest no-background-image with-overlay gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="content-wrapper col-xs-12 col-sm-8 center">
+            
+        
+                <h2 class="full-width-title dark  gb-title--emphasis">
+                            A simple and sleek iPad POS system
+                   </h2>
+        
+                <p
+    
+                                    class="full-width-subtext dark ">
+                            Nothing like traditional bulky systems, Lightspeed’s point of sale system will add a modern touch to your retail store. Your new staff can master the user-friendly software in no time, saving you much training time and money.
+                        </p>
+    
+        
+    </div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section><!-- @empty_span  -->
+
+
+<span id="possystemspricing" class="empty-span"></span><!-- @full_width_module  -->
+
+    
+    
+
+    
+    
+    
+    
+<section id=full_width_module-18 class="full-width-module gb-background-color--lightest no-background-image with-overlay gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="content-wrapper col-xs-12 col-sm-8 center">
+            
+        
+                <h2 class="full-width-title dark  gb-title--emphasis">
+                            Pricing
+                   </h2>
+        
+                <p
+    
+                                    class="full-width-subtext dark ">
+                             All of our pricing plans included onboarding sessions with product specialists and technical support that will be there for you in case of any questions or concerns.<br><br />
+<br><br />
+Starting from $99/month, our <a href="/pos/retail/pricing/"> Retail POS system pricing plans </a> are designed to meet the needs of organizations are every point of growth. Plus, we make sure the system fit your needs: add and remove registers as needed.<br><br />
+<br><br />
+Our <a href="/pos/restaurant/pricing/">  Restaurant POS system pricing plans </a> start at $69/month and start with 1 register and a basic reporting plan. As your business needs expand, so will your plan. Speak to us about your needs!<br><br />
+<br>
+                        </p>
+    
+                                                    <div class="gb-button-container gb-button-container--center __parent">
+            <a class="gb-button-cta-featured-primary gb-button-cta-featured-primary--on-light
+       gb-button-cta-featured-primary--flexible gb-button-cta-featured-primary--center "
+               title="Have questions?" href="https://www.lightspeedhq.com/integrations/talk-pos-expert/" target=""
+               data-ctaposition="body">
+                Have questions?
+            </a>
+        </div>
+    
+            
+    </div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section><!-- @free_trial_module  -->
+
+
+    
+    
+
+    
+<section  class="   gb-section-spacing  gb-background-image"  >
+            
+                    <div class="container">
+                        <div class="row">
+            <div class="col-xs-12">
+    
+<div class="container text-center free-trial">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+            <h2 class="h1">Free Trial</h2>
+            <p>Try our product for free — and see how it can change your business</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="retail-product col-xs-12 col-sm-4">
+            <div class="free-trial-icon">
+                <a href="/pos/retail/">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         preserveAspectRatio="xMidYMid" width="50" height="42.969" viewBox="0 0 50 42.969">
+                        <path d="M49.330,30.601 L38.762,33.529 L38.762,40.077 C38.762,40.346 38.642,40.603 38.432,40.777 C34.976,43.661 15.862,43.783 12.332,40.777 C12.122,40.604 12.002,40.347 12.002,40.077 L12.002,22.457 L7.100,38.880 C6.964,39.337 6.496,39.616 6.022,39.521 L0.735,38.480 C0.285,38.391 -0.032,37.993 -0.014,37.541 C0.023,36.707 0.958,16.973 9.261,3.941 C9.390,3.738 9.598,3.592 9.836,3.537 L20.459,1.057 C21.709,0.014 23.766,0.007 25.430,0.007 C27.111,0.007 29.191,0.015 30.437,1.088 L40.929,3.537 C41.167,3.592 41.374,3.738 41.505,3.941 C46.455,11.712 48.800,21.950 49.900,29.286 C49.931,29.344 49.957,29.404 49.976,29.469 C50.114,29.957 49.825,30.465 49.330,30.601 ZM1.897,36.835 L5.551,37.555 L5.978,36.127 L2.012,35.403 C1.959,35.988 1.922,36.472 1.897,36.835 ZM19.372,3.198 L17.881,3.547 C17.580,8.508 20.879,11.361 22.367,12.386 L24.227,9.752 C21.439,9.199 19.333,6.769 19.333,3.862 C19.333,3.627 19.347,3.407 19.372,3.198 ZM25.430,8.034 C27.024,8.034 28.415,7.160 29.137,5.874 C28.337,5.500 27.039,5.171 25.316,5.171 C23.926,5.171 22.616,5.399 21.680,5.791 C22.388,7.122 23.802,8.034 25.430,8.034 ZM29.407,2.721 C29.195,2.637 29.030,2.481 28.930,2.290 C28.316,1.951 27.243,1.844 25.430,1.844 C23.466,1.844 22.368,1.968 21.785,2.378 C21.713,2.486 21.616,2.576 21.504,2.647 C21.280,2.942 21.198,3.336 21.198,3.861 C21.198,3.908 21.202,3.954 21.204,4.001 C22.344,3.574 23.784,3.334 25.316,3.334 C26.946,3.334 28.484,3.608 29.652,4.087 C29.657,4.012 29.664,3.938 29.664,3.862 C29.664,3.379 29.592,3.009 29.407,2.721 ZM31.492,3.221 C31.514,3.422 31.529,3.635 31.529,3.861 C31.529,6.584 29.679,8.887 27.153,9.621 L29.104,12.386 C30.574,11.374 33.810,8.571 33.595,3.712 L31.492,3.221 ZM40.124,5.236 L35.474,4.151 C35.496,11.103 29.546,14.302 29.283,14.441 C29.144,14.513 28.994,14.547 28.847,14.547 C28.550,14.547 28.261,14.408 28.081,14.153 L25.735,10.830 L23.389,14.153 C23.210,14.408 22.921,14.547 22.624,14.547 C22.476,14.547 22.326,14.513 22.186,14.441 C21.922,14.301 15.877,11.052 15.996,3.987 L10.640,5.236 C4.954,14.379 2.900,27.136 2.194,33.568 L6.507,34.355 L12.040,15.821 C12.171,15.382 12.608,15.107 13.067,15.171 C13.525,15.235 13.866,15.623 13.866,16.080 L13.866,39.629 C17.068,41.881 33.697,41.881 36.899,39.629 L36.898,39.629 L36.898,34.043 L31.546,35.525 C31.461,35.550 31.377,35.561 31.293,35.561 C30.887,35.561 30.514,35.297 30.397,34.892 L28.763,29.210 C28.629,28.745 28.883,28.258 29.345,28.094 L36.898,25.437 L36.898,16.079 C36.898,15.622 37.238,15.235 37.697,15.170 C38.155,15.107 38.593,15.382 38.724,15.820 L41.148,23.942 L46.615,22.018 C45.298,16.402 43.265,10.286 40.124,5.236 ZM33.627,33.042 L32.562,28.914 L30.794,29.537 L31.938,33.511 L33.627,33.042 ZM38.705,21.178 L38.763,24.781 L39.391,24.561 L38.705,21.178 ZM47.020,23.827 L34.325,28.294 L35.424,32.545 L47.980,29.068 C47.727,27.435 47.412,25.671 47.020,23.827 ZM25.700,33.376 C25.250,33.376 24.885,33.016 24.885,32.572 C24.885,32.127 25.250,31.768 25.700,31.768 C26.151,31.768 26.516,32.127 26.516,32.572 C26.516,33.016 26.151,33.376 25.700,33.376 ZM25.700,26.084 C25.250,26.084 24.885,25.723 24.885,25.280 C24.885,24.835 25.250,24.475 25.700,24.475 C26.151,24.475 26.516,24.835 26.516,25.280 C26.516,25.723 26.151,26.084 25.700,26.084 ZM25.700,18.790 C25.250,18.790 24.885,18.430 24.885,17.986 C24.885,17.542 25.250,17.182 25.700,17.182 C26.151,17.182 26.516,17.542 26.516,17.986 C26.516,18.430 26.151,18.790 25.700,18.790 Z"/>
+                    </svg>
+                    <h3>Retail</h3>
+                </a>
+            </div>
+            <div class="wrapper">
+                <a class="button secondary"
+                   href="/pos/retail/register-for-a-free-trial/">Try it now</a>
+            </div>
+        </div>
+        
+        <div class="resto-product col-xs-12 col-sm-4">
+            <div class="free-trial-icon">
+                <a href="/pos/restaurant/">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         preserveAspectRatio="xMidYMid" width="50" height="38.969" viewBox="0 0 50 38.969">
+                        <path d="M48.714,38.968 C48.007,38.968 47.434,38.567 47.434,38.071 L47.434,21.928 C47.434,16.846 46.362,18.852 45.300,16.248 C44.447,14.156 45.300,3.095 47.861,0.704 C48.947,-0.311 49.994,-0.193 49.994,0.704 C49.994,1.532 49.994,16.100 49.994,18.341 L49.994,18.640 L49.994,38.071 C49.994,38.567 49.421,38.968 48.714,38.968 ZM25.274,36.444 C15.899,36.444 8.299,28.856 8.299,19.496 C8.299,10.136 15.899,2.548 25.274,2.548 C34.648,2.548 42.249,10.136 42.249,19.496 C42.249,28.856 34.648,36.444 25.274,36.444 ZM25.274,4.683 C17.081,4.683 10.438,11.315 10.438,19.496 C10.438,27.677 17.081,34.309 25.274,34.309 C33.467,34.309 40.110,27.677 40.110,19.496 C40.110,11.315 33.467,4.683 25.274,4.683 ZM25.274,31.078 C18.868,31.078 13.674,25.891 13.674,19.496 C13.674,13.100 18.868,7.914 25.274,7.914 C31.680,7.914 36.874,13.100 36.874,19.496 C36.874,25.891 31.680,31.078 25.274,31.078 ZM25.274,9.374 C19.675,9.374 15.136,13.906 15.136,19.496 C15.136,25.085 19.675,29.618 25.274,29.618 C30.873,29.618 35.412,25.085 35.412,19.496 C35.412,13.906 30.873,9.374 25.274,9.374 ZM4.255,23.424 L4.255,38.048 C4.255,38.556 3.681,38.969 2.975,38.969 C2.267,38.969 1.694,38.556 1.694,38.048 L1.694,23.424 L1.694,15.268 C1.694,13.681 -0.012,13.681 -0.012,10.942 L-0.012,9.808 L-0.012,1.497 L-0.012,1.341 C-0.012,0.593 0.179,-0.013 0.414,-0.013 C0.650,-0.013 0.841,0.593 0.841,1.341 L0.841,1.497 L0.841,5.511 L0.841,6.149 L0.841,8.771 C0.841,8.935 1.032,9.068 1.267,9.068 C1.503,9.068 1.694,8.935 1.694,8.771 L1.694,6.149 L1.694,5.511 L1.694,1.497 L1.694,1.341 C1.694,0.593 1.885,-0.013 2.121,-0.013 C2.356,-0.013 2.548,0.593 2.548,1.341 L2.548,1.497 L2.548,5.511 L2.548,6.149 L2.548,8.771 C2.548,8.935 2.738,9.068 2.975,9.068 C3.210,9.068 3.401,8.935 3.401,8.771 L3.401,6.149 L3.401,5.511 L3.401,1.497 L3.401,1.341 C3.401,0.593 3.592,-0.013 3.828,-0.013 C4.063,-0.013 4.255,0.593 4.255,1.341 L4.255,1.497 L4.255,5.511 L4.255,6.149 L4.255,8.771 C4.255,8.935 4.445,9.068 4.682,9.068 C4.916,9.068 5.108,8.935 5.108,8.771 L5.108,6.149 L5.108,5.511 L5.108,1.497 L5.108,1.341 C5.108,0.593 5.300,-0.013 5.535,-0.013 C5.770,-0.013 5.962,0.593 5.962,1.341 L5.962,1.497 L5.962,9.808 L5.962,10.941 C5.962,13.680 4.255,13.680 4.255,15.267 L4.255,23.424 Z"/>
+                    </svg>
+                    <h3>Restaurant</h3>
+                </a>
+            </div>
+            <div class="wrapper">
+                <a class="button secondary"
+                   href="/pos/restaurant/register-for-a-free-trial/">Try it now</a>
+            </div>
+        </div>
+        
+        <div class="ecommerce-product col-xs-12 col-sm-4">
+            <div class="free-trial-icon">
+                <a href="/ecommerce/">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         preserveAspectRatio="xMidYMid" width="50" height="38" viewBox="0 0 50 38">
+                        <path d="M49.319,37.993 L0.672,37.993 C0.301,37.993 0.001,37.699 0.001,37.338 L0.001,0.657 C0.001,0.296 0.301,0.004 0.672,0.004 L49.319,0.004 C49.690,0.004 49.990,0.296 49.990,0.657 L49.990,37.338 C49.990,37.699 49.690,37.993 49.319,37.993 ZM48.645,1.313 L1.343,1.313 L1.343,4.565 L48.645,4.565 L48.645,1.313 ZM48.645,5.877 L1.343,5.877 L1.343,36.684 L48.645,36.684 L48.645,5.877 ZM8.321,12.137 L10.693,12.137 L10.693,11.866 C10.693,11.508 10.997,11.212 11.364,11.212 L13.146,11.212 C13.516,11.212 13.817,11.508 13.817,11.866 L13.817,12.137 L14.087,12.137 L14.087,11.156 C14.087,10.397 14.723,9.781 15.501,9.781 L16.545,9.781 C17.324,9.781 17.960,10.397 17.960,11.156 L17.960,12.137 L18.171,12.137 L18.171,11.866 C18.171,11.508 18.472,11.212 18.842,11.212 L20.625,11.212 C20.992,11.212 21.296,11.508 21.296,11.866 L21.296,12.137 L23.723,12.137 C24.096,12.137 24.396,12.430 24.394,12.791 L24.394,31.953 C24.394,32.314 24.093,32.608 23.723,32.608 L8.321,32.608 C7.953,32.608 7.650,32.314 7.650,31.953 L7.650,12.791 C7.650,12.430 7.953,12.137 8.321,12.137 ZM12.478,12.523 L12.038,12.523 L12.038,20.321 L12.478,20.321 L12.478,12.523 ZM13.305,21.630 L11.214,21.630 L11.214,21.955 L13.305,21.955 L13.305,21.630 ZM12.035,23.267 L12.035,24.073 C12.041,24.051 12.122,24.107 12.255,24.107 C12.391,24.107 12.469,24.051 12.483,24.034 L12.475,23.267 L12.035,23.267 ZM16.620,11.156 C16.620,11.122 16.588,11.091 16.548,11.091 L15.504,11.091 C15.463,11.091 15.432,11.122 15.432,11.156 L15.432,12.137 L16.620,12.137 L16.620,11.156 ZM18.174,13.449 L13.820,13.449 L13.820,18.597 L18.174,18.597 L18.174,13.449 ZM19.956,12.523 L19.517,12.523 L19.517,20.321 L19.956,20.321 L19.956,12.523 ZM20.778,21.630 L18.686,21.630 L18.686,21.955 L20.778,21.955 L20.778,21.630 ZM19.514,23.267 L19.514,24.073 C19.519,24.051 19.600,24.107 19.734,24.107 C19.869,24.107 19.948,24.051 19.962,24.034 L19.953,23.267 L19.514,23.267 ZM23.051,13.449 L21.296,13.449 L21.296,18.597 L21.555,18.597 C22.384,18.597 23.051,17.943 23.051,17.139 L23.051,13.449 ZM8.992,31.298 L23.051,31.298 L23.051,19.486 C22.618,19.754 22.106,19.907 21.555,19.907 L21.296,19.907 L21.296,20.321 L21.449,20.321 C21.819,20.321 22.120,20.614 22.120,20.976 L22.120,22.609 C22.120,22.970 21.819,23.264 21.449,23.264 L21.296,23.264 L21.296,24.070 C21.296,24.812 20.593,25.416 19.734,25.416 C18.871,25.416 18.171,24.812 18.171,24.070 L18.171,23.264 L18.015,23.264 C17.647,23.264 17.344,22.970 17.344,22.609 L17.344,20.976 C17.344,20.614 17.647,20.321 18.015,20.321 L18.171,20.321 L18.171,19.907 L13.817,19.907 L13.817,20.321 L13.973,20.321 C14.344,20.321 14.644,20.614 14.644,20.976 L14.644,22.609 C14.644,22.970 14.344,23.264 13.973,23.264 L13.817,23.264 L13.817,24.070 C13.817,24.812 13.120,25.416 12.255,25.416 C11.396,25.416 10.693,24.812 10.693,24.070 L10.693,23.264 L10.539,23.264 C10.169,23.264 9.868,22.970 9.868,22.609 L9.868,20.976 C9.868,20.614 10.169,20.321 10.539,20.321 L10.693,20.321 L10.693,19.907 L10.487,19.907 C9.938,19.907 9.426,19.751 8.992,19.486 L8.992,31.298 ZM8.992,17.139 C8.992,17.943 9.663,18.597 10.487,18.597 L10.693,18.597 L10.693,13.449 L8.992,13.449 L8.992,17.139 ZM11.367,26.719 L20.625,26.719 C20.995,26.719 21.296,27.013 21.296,27.374 C21.296,27.735 20.995,28.029 20.625,28.029 L11.367,28.029 C10.997,28.029 10.696,27.735 10.696,27.374 C10.696,27.013 10.997,26.719 11.367,26.719 ZM32.766,13.737 C32.720,13.737 32.673,13.731 32.632,13.722 C31.577,13.652 30.735,12.800 30.735,11.753 C30.735,10.890 31.305,10.157 32.098,9.888 L32.098,9.466 C32.098,9.104 32.398,8.812 32.769,8.812 C33.139,8.812 33.440,9.104 33.440,9.466 L33.440,9.888 C34.233,10.154 34.802,10.888 34.802,11.753 C34.802,12.114 34.499,12.408 34.131,12.408 C33.761,12.408 33.460,12.114 33.460,11.753 C33.460,11.387 33.151,11.085 32.772,11.085 C32.390,11.085 32.083,11.387 32.083,11.753 C32.083,12.125 32.392,12.424 32.772,12.424 C32.818,12.424 32.864,12.430 32.905,12.439 C33.960,12.510 34.802,13.356 34.802,14.408 C34.802,15.272 34.233,16.004 33.440,16.273 L33.440,16.614 C33.440,16.975 33.139,17.268 32.769,17.268 C32.398,17.268 32.098,16.975 32.098,16.614 L32.098,16.273 C31.305,16.007 30.735,15.275 30.735,14.408 C30.735,14.047 31.039,13.753 31.406,13.753 C31.776,13.753 32.077,14.047 32.077,14.408 C32.077,14.774 32.387,15.076 32.766,15.076 C33.148,15.076 33.454,14.774 33.454,14.408 C33.454,14.036 33.145,13.737 32.766,13.737 ZM31.409,20.318 L39.070,20.318 C39.440,20.318 39.741,20.612 39.741,20.973 C39.741,21.334 39.443,21.627 39.073,21.627 L31.409,21.627 C31.039,21.627 30.738,21.334 30.738,20.973 C30.738,20.612 31.039,20.318 31.409,20.318 ZM31.409,24.677 L44.722,24.677 C45.093,24.677 45.393,24.971 45.393,25.332 C45.393,25.693 45.093,25.986 44.722,25.986 L31.409,25.986 C31.039,25.986 30.738,25.693 30.738,25.332 C30.738,24.971 31.039,24.677 31.409,24.677 ZM31.409,26.908 L44.722,26.908 C45.093,26.908 45.393,27.202 45.393,27.563 C45.393,27.924 45.093,28.218 44.722,28.218 L31.409,28.218 C31.039,28.218 30.738,27.924 30.738,27.563 C30.738,27.202 31.039,26.908 31.409,26.908 ZM31.409,29.143 L44.722,29.143 C45.093,29.143 45.393,29.436 45.393,29.797 C45.393,30.158 45.093,30.451 44.722,30.451 L31.409,30.451 C31.039,30.451 30.738,30.158 30.738,29.797 C30.738,29.436 31.039,29.143 31.409,29.143 ZM31.409,31.377 L42.087,31.377 C42.457,31.377 42.758,31.671 42.758,32.032 C42.758,32.393 42.457,32.686 42.087,32.686 L31.409,32.686 C31.039,32.686 30.738,32.393 30.738,32.032 C30.738,31.671 31.039,31.377 31.409,31.377 ZM3.796,2.979 C3.796,3.843 2.465,3.843 2.465,2.979 C2.465,2.113 3.796,2.113 3.796,2.979 ZM5.920,2.979 C5.920,3.843 4.592,3.843 4.592,2.979 C4.592,2.113 5.920,2.113 5.920,2.979 ZM7.968,2.979 C7.968,3.843 6.640,3.843 6.640,2.979 C6.640,2.113 7.968,2.113 7.968,2.979 Z"/>
+                    </svg>
+                    <h3>eCommerce</h3>
+                </a>
+            </div>
+            
+            <div class="wrapper">
+                <a class="button secondary"
+                   href="/ecommerce/register-for-a-free-trial/">Try it now</a>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+ </div>
+</section></div>
+<footer class="footer-contentinfo" role="contentinfo" data-footer-type="default">
+        <div class="footer-container">
+                <div class="footer-main gb-section-spacing">
+        <div class="footer-columns">
+            <div class="container">
+                <div class="footer-content gb-flex">
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/pos/retail/" title="Retail POS">
+                                    Retail POS
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/retail/features/" title="Features">
+                                                Features
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/retail/pricing/" title="Pricing">
+                                                Pricing
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/retail/hardware/" title="Hardware">
+                                                Hardware
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/blog/what-is-a-pos-purchase-and-other-pos-term-clarifications/" title="What is a POS">
+                                                What is a POS
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos-system/" title="POS system">
+                                                POS system
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/retail/omnichannel/" title="Omnichannel">
+                                                Omnichannel
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                            
+                                                                                            </ul>
+                        </div>
+                                        
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/pos/restaurant/" title="Restaurant POS">
+                                    Restaurant POS
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/restaurant/features/" title="Features">
+                                                Features
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/restaurant/pricing/" title="Pricing">
+                                                Pricing
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/restaurant/hardware/" title="Hardware">
+                                                Hardware
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/restaurant/ipad-pos/" title="Restaurant iPad POS">
+                                                Restaurant iPad POS
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/restaurant/self-order-menu/" title="iPad kiosk">
+                                                iPad kiosk
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/restaurant/free-restaurant-menu-template/" title="Restaurant Menu Templates">
+                                                Restaurant Menu Templates
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                            
+                                                                                            </ul>
+                        </div>
+                                        
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/ecommerce/" title="eCommerce">
+                                    eCommerce
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/ecommerce/features/" title="Features ">
+                                                Features 
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/ecommerce/pricing/" title="Pricing">
+                                                Pricing
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/ecommerce/store/apps/" title="Apps">
+                                                Apps
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="https://themes.lightspeedhq.com" title="Themes">
+                                                Themes
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/ecommerce/open-online-store/" title="Open online store">
+                                                Open online store
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                
+                                                                                            </ul>
+                        </div>
+                                        
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/pos/onsite/" title="OnSite POS">
+                                    OnSite POS
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/onsite/features/" title="Features">
+                                                Features
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/onsite/pricing/" title="Pricing">
+                                                Pricing
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/onsite/hardware/" title="Hardware">
+                                                Hardware
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/pos/onsite/downloads/" title="Downloads">
+                                                Downloads
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    
+                                                                                            </ul>
+                        </div>
+                                        
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/resources/" title="Resources">
+                                    Resources
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/blog/" title="Blog">
+                                                Blog
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/resources/white-papers/" title="Whitepapers">
+                                                Whitepapers
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/resources/webinars/" title="Webinars">
+                                                Webinars
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/reviews/" title="Reviews">
+                                                Reviews
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="https://community.lightspeedhq.com/en/" title="Community">
+                                                Community
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/experts/" title="Find an expert">
+                                                Find an expert
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                            
+                                                                                            </ul>
+                        </div>
+                                        
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/partners/" title="Partners">
+                                    Partners
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/experts/" title="Experts">
+                                                Experts
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/ecommerce/store/apps/" title="Apps">
+                                                Apps
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/integrations/" title="Integrations">
+                                                Integrations
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="https://themes.lightspeedhq.com" title="Themes">
+                                                Themes
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/partners/apple-reseller/" title="Apple">
+                                                Apple
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/partners/experts/" title="Become an expert">
+                                                Become an expert
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                            
+                                                                                            </ul>
+                        </div>
+                                        
+                                                            <div class="footer-main__column">
+                            <p class="footer-main__title">
+                                <a class="footer-main__link" href="/why-lightspeed/" title="Company">
+                                    Company
+                                </a>
+                            </p>
+                            <ul class="footer-main__list footer-main__linklist">
+                                                                                                            <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/about/" title="About">
+                                                About
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/press/" title="Press">
+                                                Press
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/reviews/" title="Reviews">
+                                                Reviews
+                                            </a>
+                                        </li>
+                                                                                                                                                <li class="footer-main__list-item">
+                                            <a class="footer-main__link footer-main__text" href="/contact/" title="Contact">
+                                                Contact
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    
+                                                                    <li class="footer-main__list-item">
+                            <div class="gb-button-container gb-button-container--left gb-button-container--center-mobile">
+            <a class="gb-button-jumpoff gb-button-jumpoff--left "
+               title="Careers" href="/careers/">Careers</a>
+        </div>
+    
+    </li>
+                            </ul>
+                        </div>
+                                        
+                                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+<div class="footer-main footer-main--misc">
+    <div class="footer-main__container">
+        <div class="container">
+            <div class="footer-content gb-flex">
+                <div class="footer-main__utility footer-main__column">
+                    <ul class="footer-main__list footer-main__links">
+			                                        <li class="footer-main__list-item"> 
+                                <div class="language-selector-gnt">
+    <div class="language-selector-gnt__flag local-flag flag-us">
+        <button class="language-selector-gnt__flag-link language-selector-gnt__flag-link--current">
+            US(EN)
+        </button> 
+    </div>
+    <ul class="language-selector-gnt__list">
+                    <li class="language-selector-gnt__flag local-flag flag-uk">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.co.uk">UK(EN)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-ca">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.com">CA(EN)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-au">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.com.au">AU(EN)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-qc">
+                <a class="language-selector-gnt__flag-link" href="//fr.lightspeedhq.com">CA(FR)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-fr">
+                <a class="language-selector-gnt__flag-link" href="//fr.lightspeedhq.be">FR(FR)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-nl">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.nl">NL(NL)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-be">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.be">BE(NL)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-be">
+                <a class="language-selector-gnt__flag-link" href="//fr.lightspeedhq.be">BE(FR)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-de">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.de">DE(DE)</a>
+            </li>
+                    <li class="language-selector-gnt__flag local-flag flag-mx">
+                <a class="language-selector-gnt__flag-link" href="//www.lightspeedhq.mx">MX(ES)</a>
+            </li>
+            </ul>
+</div>                            </li> 
+                                                                                                            <li class="footer-main__list-item">
+                                    <a href="/sitemap/" class="footer-main__link footer-main__text" title="Sitemap">
+                                        Sitemap
+                                    </a>
+                                </li>
+                                                                                                                <li class="footer-main__list-item">
+                                    <a href="/privacy-policy/" class="footer-main__link footer-main__text" title="Privacy policy">
+                                        Privacy policy
+                                    </a>
+                                </li>
+                                                                                                                <li class="footer-main__list-item">
+                                    <a href="/security/" class="footer-main__link footer-main__text" title="Security">
+                                        Security
+                                    </a>
+                                </li>
+                                                                                                                            </ul>
+                </div>
+                <div class="footer-main__social-copy footer-main__column">
+                                            <div class="footer-main__phone">
+    <a class="footer-main__link footer-main__phone__number js-phone-link" href="tel:866-932-1801" title="866-932-1801">
+        866-932-1801
+    </a>
+</div>                                        
+<ul class="footer-main__list footer-main__socials">
+            <li class="footer-main__list-item">
+            <a target="_blank" rel="nofollow" class="footer-main__link" href="https://www.facebook.com/LightspeedHQ/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.04 112.04">
+                    <path d="M56.02 0a56 56 0 1 0 56 56 56 56 0 0 0-56-56zm14.75 51l-.48 5.21h-9.83v33.14H47.17V56.18h-6.64V42.91h6.58v-6c0-5.43 2.59-13.91 14-13.91h10.25v11.37h-7.44c-1.21 0-2.93.6-2.93 3.19v5.31h10.47z"/>
+                </svg>
+            </a>
+        </li>
+                <li class="footer-main__list-item">
+            <a target="_blank" rel="nofollow" class="footer-main__link" href="https://twitter.com/LightspeedHQ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.04 112.04">
+                    <path d="M56.02 0a56 56 0 1 0 56 56 56 56 0 0 0-56-56zm26.39 45.87v1.73a36.82 36.82 0 0 1-.93 8.09c-3.45 15.3-16.53 30-37.81 30a39 39 0 0 1-20.87-6 28.17 28.17 0 0 0 3.25.19 27.57 27.57 0 0 0 16.91-5.74 13.61 13.61 0 0 1-12.72-9.31 13.63 13.63 0 0 0 2.56.24 14.06 14.06 0 0 0 3.66-.45 13.59 13.59 0 0 1-10-8.29 13.16 13.16 0 0 1-.93-4.86v-.17a13.75 13.75 0 0 0 6.17 1.68 13.35 13.35 0 0 1-6.06-11.15 13.2 13.2 0 0 1 1.85-6.74 38.86 38.86 0 0 0 28.06 14 13.42 13.42 0 0 1 13.24-16.47 13.68 13.68 0 0 1 9.93 4.23 27.47 27.47 0 0 0 8.65-3.26 13.48 13.48 0 0 1-6 7.42 27.47 27.47 0 0 0 7.82-2.11 27.36 27.36 0 0 1-6.78 6.96z"/>
+                </svg>
+            </a>
+        </li>
+                <li class="footer-main__list-item">
+            <a target="_blank" rel="nofollow" class="footer-main__link" href="https://www.instagram.com/lightspeedhq/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.04 112.04">
+                    <circle cx="56.02" cy="56.02" r="10.02"/>
+                    <path d="M79.46 38.29a10 10 0 0 0-5.71-5.71 16.64 16.64 0 0 0-5.58-1c-3.17-.14-4.12-.18-12.15-.18s-9 0-12.15.18a16.64 16.64 0 0 0-5.58 1 10 10 0 0 0-5.71 5.71 16.64 16.64 0 0 0-1 5.58c-.14 3.17-.18 4.12-.18 12.15s0 9 .18 12.15a16.64 16.64 0 0 0 1 5.58 10 10 0 0 0 5.71 5.71 16.64 16.64 0 0 0 5.58 1c3.17.14 4.12.18 12.15.18s9 0 12.15-.18a16.64 16.64 0 0 0 5.58-1 10 10 0 0 0 5.71-5.71 16.64 16.64 0 0 0 1-5.58c.14-3.17.18-4.12.18-12.15s0-9-.18-12.15a16.64 16.64 0 0 0-1-5.58zM56.02 71.47a15.44 15.44 0 1 1 15.44-15.44 15.44 15.44 0 0 1-15.44 15.44zm16.05-27.89a3.61 3.61 0 1 1 3.61-3.61 3.61 3.61 0 0 1-3.61 3.61z"/>
+                    <path d="M56.02 0a56 56 0 1 0 56 56 56 56 0 0 0-56-56zm29.89 68.38a22.08 22.08 0 0 1-1.4 7.3 15.38 15.38 0 0 1-8.8 8.8 22.08 22.08 0 0 1-7.3 1.4c-3.21.15-4.23.18-12.4.18s-9.19 0-12.4-.18a22.08 22.08 0 0 1-7.3-1.4 15.38 15.38 0 0 1-8.8-8.8 22.08 22.08 0 0 1-1.35-7.3c-.15-3.21-.18-4.23-.18-12.4s0-9.19.18-12.4a22.08 22.08 0 0 1 1.4-7.3 15.38 15.38 0 0 1 8.8-8.8 22.08 22.08 0 0 1 7.3-1.4c3.21-.15 4.23-.18 12.4-.18s9.19 0 12.4.18a22.08 22.08 0 0 1 7.3 1.4 15.38 15.38 0 0 1 8.8 8.8 22.08 22.08 0 0 1 1.4 7.3c.15 3.21.18 4.23.18 12.4s-.08 9.24-.23 12.4z"/>
+                </svg>
+            </a>
+        </li>
+                <li class="footer-main__list-item">
+            <a target="_blank" rel="nofollow" class="footer-main__link" href="https://www.pinterest.com/lightspeedhq/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.04 112.04">
+                    <path d="M56.02 112.04a56 56 0 1 0-56-56 56 56 0 0 0 56 56zm2.79-91.33c15 0 24.94 10.53 24.94 21.83a35.29 35.29 0 0 1-.86 7.88c-2.43 10.83-10.08 18.24-20.43 18.24-4.25 0-8.25-2.22-9.62-4.75 0 0-2.29 8.78-2.77 10.48-1.71 6-6.72 12-7.11 12.47a.53.53 0 0 1-.94-.22c-.11-.76-1.38-8.32.12-14.48l5.07-20.77a12.85 12.85 0 0 1-1-3.19 15.62 15.62 0 0 1-.27-2.85c0-5.65 3.39-9.86 7.6-9.86 3.58 0 5.31 2.6 5.31 5.72a24.39 24.39 0 0 1-1.4 6.59c-.7 2.25-1.51 4.63-2.08 6.93-1 4 2.1 7.34 6.22 7.34 5.79 0 10.11-5.59 11.75-13.23a33.49 33.49 0 0 0 .73-7c0-8.35-5.81-14.6-16.39-14.6-11.94 0-19.39 8.62-19.39 18.26a12.86 12.86 0 0 0 .46 3.54 10 10 0 0 0 2.14 3.94 1.81 1.81 0 0 1 .57 2.12c-.19.71-.62 2.39-.81 3.06a1.37 1.37 0 0 1-2 1c-3.82-1.51-6.22-4.79-7.33-8.85a21.58 21.58 0 0 1-.73-5.72c.07-10.9 9.51-23.88 28.22-23.89z"/>
+                </svg>
+            </a>
+        </li>
+                <li class="footer-main__list-item">
+            <a target="_blank" rel="nofollow" class="footer-main__link" href="https://www.linkedin.com/company/1557218?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1557218%2Cidx%3A2-2-5%2CtarId%3A1464184739871%2Ctas%3Alightspeed">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.04 112.04">
+                    <path d="M56.02.04a56 56 0 1 0 56 56 56 56 0 0 0-56-56zm-16.26 51.2v35.11H24.27V42.12h15.49v9.13zm-7.74-15.76a7.74 7.74 0 1 1 7.74-7.74 7.74 7.74 0 0 1-7.75 7.74zm58.61 26.56v24.31H77.35V64.8c0-5.14-.57-11.75-7.61-11.75s-8.28 5.59-8.28 11.38v21.93H48.6V42.12h12.33v6h.19c1.84-3.49 6.33-6 13-6 11.27 0 15.1 5.24 16.15 13.58a51.45 51.45 0 0 1 .34 6.35z"/>
+                </svg>
+            </a>
+        </li>
+                <li class="footer-main__list-item">
+            <a target="_blank" rel="nofollow" class="footer-main__link" href="https://www.youtube.com/user/lightspeedretail">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.04 112.04">
+                    <path d="M49.17 45.71v19.44l17.92-9.68-9.84-5.36-8.08-4.4z"/>
+                    <path d="M56.02 0a56 56 0 1 0 56 56 56 56 0 0 0-56-56zM89.2 54.51v4.28a108.46 108.46 0 0 1-.67 11.2s-.65 4.77-2.63 6.87a9.28 9.28 0 0 1-6.64 2.93c-9.29.7-23.23.72-23.23.72s-17.25-.17-22.56-.7c-1.47-.29-4.79-.2-7.32-3-2-2.1-2.63-6.87-2.63-6.87a108.74 108.74 0 0 1-.67-11.2v-5.25a108.65 108.65 0 0 1 .67-11.2s.65-4.77 2.63-6.87a9.27 9.27 0 0 1 6.65-2.93c9.28-.7 23.22-.7 23.22-.7s13.92 0 23.22.7a9.29 9.29 0 0 1 6.64 2.93c2 2.1 2.63 6.87 2.63 6.87a108.49 108.49 0 0 1 .67 11.2v1z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+                    <li class="footer__copyright"><p class="footer-main__text">&copy; Lightspeed 2019</p></li>
+                </div>
+                <div class="footer-main__logo footer-main__column">
+                    <a class="footer-main__logo__link" href="https://www.lightspeedhq.com/" rel="home" title="Lightspeed POS">
+                        <svg class="footer-main__logo__icon" viewBox="0 0 475 110" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path class="logo-flame"
+                                  d="M36.9,0.9 L41.9,9.6 C42.9,11.4 42.9,13.6 41.9,15.4 L12.1,67.1 L26.2,91.5 C28.4,95.3 32.5,97.7 36.9,97.7 C41.3,97.7 45.4,95.3 47.6,91.5 L61.7,67.1 L58,60.5 L42,88.2 C41,90 39,91.1 37,91.1 C34.9,91.1 33,90 32,88.2 L19.7,67.1 L47.4,19.1 L52.4,27.8 C53.4,29.6 53.4,31.8 52.4,33.6 L33.1,67.1 L36.9,73.7 L57.9,37.3 L71.7,61.2 C73.8,64.9 73.8,69.4 71.7,73.1 L57.7,97.4 C55.6,101.1 48.9,109.4 36.9,109.4 C24.9,109.4 18.3,101.1 16.1,97.4 L2.1,73.1 C-8.43769499e-15,69.4 -8.43769499e-15,64.9 2.1,61.2 L36.9,0.9"></path>
+                            <g transform="translate(102.000000, 25.000000)">
+                                <rect x="0" y="1.8" width="9.7" height="57.3"></rect>
+                                <circle cx="22.7" cy="6.6" r="5.7"></circle>
+                                <rect x="17.8" y="19.3" width="9.8" height="39.8"></rect>
+                                <path d="M53.3,18.3 C42.2,18.3 33.2,26.1 33.2,38.5 C33.2,50.9 41,58.5 53.4,58.5 C58.3,58.5 63.5,61 63.5,66.5 C63.5,72 59.1,75.1 53.4,75.1 C47.7,75.1 43,71.7 43,66.5 L33.2,66.5 C33.2,77.2 41.8,84.3 53.4,84.3 C64.9,84.3 73.3,77.5 73.3,66.5 C73.3,61.4 71.7,56.6 65.1,53.3 C71.6,50.3 73.5,43.4 73.5,38.4 C73.5,26.1 64.4,18.3 53.3,18.3 L53.3,18.3 Z M53.4,50.4 C47.7,50.4 43,45.5 43,38.5 C43,31.6 47.7,26.5 53.4,26.5 C59.1,26.5 63.7,31.7 63.7,38.5 C63.7,45.4 59,50.4 53.4,50.4 L53.4,50.4 Z"></path>
+                                <path d="M101.9,18.3 C97.4,18.3 93.1,19.7 89.5,24.2 L89.5,1.7 L79.7,1.7 L79.7,59 L89.5,59 L89.5,38.8 C89.5,32.9 93.5,28 99.3,28 C104.5,28 108.3,31.1 108.3,38.3 L108.3,59 L118.1,59 L118.1,37.6 C118.2,25.9 113.2,18.3 101.9,18.3 L101.9,18.3 Z"></path>
+                                <path d="M142,52.3 C140.8,52.3 139.8,51.9 139.2,51.1 C138.6,50.3 138.3,49.1 138.3,47.3 L138.3,27.7 L146.2,27.7 L147.1,19.2 L138.4,19.2 L138.4,8.3 L128.5,9.4 L128.5,19.3 L121,19.3 L121,27.8 L128.5,27.8 L128.5,47.6 C128.5,51.7 129.5,54.8 131.4,56.9 C133.3,59 136.2,60.1 139.9,60.1 C141.6,60.1 143.2,59.9 144.9,59.4 C146.6,58.9 148.1,58.2 149.4,57.3 L146,51 C144.7,51.9 143.3,52.3 142,52.3 L142,52.3 Z"></path>
+                                <path d="M182.3,37.7 C178.3,35.2 173.6,34.9 169,34.6 C166.3,34.4 162.2,33.8 162.2,30.3 C162.2,27.8 164.8,26.4 169.5,26.4 C173.3,26.4 176.6,27.3 179.4,29.9 L184.9,23.5 C180.3,19.5 175.6,18.3 169.3,18.3 C162,18.3 152.4,21.5 152.4,30.7 C152.4,34.5 154.4,38 157.7,40 C161.4,42.3 166.2,42.6 170.3,43.1 C173.1,43.4 177.7,44.1 176.9,48 C176.4,50.7 173.1,51.5 170.8,51.6 C168.3,51.7 165.8,51.5 163.3,50.9 C160.7,50.2 158.6,49 156.3,47.5 L151.3,53.8 C151.6,54 151.9,54.3 151.9,54.3 C158.3,59.6 167.2,61.3 175.3,59.5 C181.4,58.1 186.6,53.7 186.6,47.1 C186.8,43.4 185.6,39.7 182.3,37.7 L182.3,37.7 Z"></path>
+                                <path d="M214.6,18.3 C210.1,18.3 204.8,20.2 201.7,24.6 L201.4,19.2 L191.9,19.2 L191.9,76.5 L201.7,75.4 L201.7,54.4 C204.5,58.7 210.6,60.1 214.8,60.1 C227.5,60.1 234.9,50.6 234.9,39.1 C234.9,27.4 226.8,18.3 214.6,18.3 L214.6,18.3 Z M213.8,51.6 C207.1,51.6 202.6,45.5 202.6,39.3 C202.6,33.1 206.8,26.5 213.8,26.5 C220.9,26.5 225,33.2 225,39.3 C225.1,45.5 220.5,51.6 213.8,51.6 L213.8,51.6 Z"></path>
+                                <path d="M247.7,42.7 C248.8,47.4 253.1,51.5 260.1,51.5 C263.7,51.5 268.5,49.7 270.8,47.4 L277.1,53.6 C272.9,57.9 266,60 260,60 C247.6,60 238.6,51.8 238.6,39.1 C238.6,27.1 247.9,18.3 259.3,18.3 C271.3,18.3 281.3,26.5 280.3,42.7 L247.7,42.7 L247.7,42.7 Z M270.8,35.2 C269.7,30.5 265,26.4 259.3,26.4 C254,26.4 249.1,30 247.7,35.2 L270.8,35.2 L270.8,35.2 Z"></path>
+                                <path d="M293.1,42.7 C294.2,47.4 298.5,51.5 305.5,51.5 C309.1,51.5 313.9,49.7 316.2,47.4 L322.5,53.6 C318.3,57.9 311.4,60 305.4,60 C293,60 284,51.8 284,39.1 C284,27.1 293.3,18.3 304.7,18.3 C316.7,18.3 326.7,26.5 325.7,42.7 L293.1,42.7 L293.1,42.7 Z M316.3,35.2 C315.2,30.5 310.5,26.4 304.8,26.4 C299.5,26.4 294.6,30 293.2,35.2 L316.3,35.2 L316.3,35.2 Z"></path>
+                                <path d="M349.4,60.1 C353.9,60.1 359.2,58.2 362.3,53.8 L362.6,59.1 L372.1,59.1 L372.1,1.8 L362.3,1.8 L362.3,24 C359.5,19.7 353.3,18.4 349.1,18.4 C336.4,18.4 329.1,27.8 329.1,39.4 C329.1,51 337.2,60.1 349.4,60.1 L349.4,60.1 Z M350.1,26.8 C356.8,26.8 361.3,32.9 361.3,39.1 C361.3,45.3 357.1,51.9 350.1,51.9 C343,51.9 338.9,45.2 338.9,39.1 C338.9,32.9 343.4,26.8 350.1,26.8 L350.1,26.8 Z"></path>
+                            </g>
+                        </svg>
+                    </a>
+        
+                                                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            
+
+        </div>
+    </footer><script type='text/javascript' src='https://www.lightspeedhq.com/wp-content/themes/ls/prod/js/libs.min.js?ver=1551385213'></script>
+<script type='text/javascript' src='https://www.lightspeedhq.com/wp-content/themes/ls/prod/js/core.min.js?ver=1551385213'></script>
+    <script>
+        chat_json = {"info":{"version":"1.2.2"},"marketing":{"license":"2206881","excluded_countries":["AF","AD","AO","AM","AZ","BD","BY","BJ","BT","BA","BW","IO","BF","BI","CM","CV","CF","TD","CN","CX","CC","KM","DJ","GQ","ER","ET","GA","GM","GE","GH","GN","GW","VA","HU","IS","IR","IQ","KP","KR","KG","LA","LV","LB","LS","LR","LY","LT","MO","MK","MG","MW","ML","MR","YT","MD","MC","MN","ME","MS","MM","NA","NP","NE","OM","PK","PS","PG","PL","PT","RE","RU","RW","SH","SM","ST","SN","RS","SL","SK","SI","SO","SS","SD","SJ","SZ","SY","TJ","TL","TG","TO","TR","TM","UA","UZ","EH","YE","ZM","ZW"],"excluded_domains":["lightspeedhq.mx","lightspeedhq.de"],"excluded_directories":["/support/","/referrals/","/careers/","/blog/"],"parameters":{"default":"12","tld":{"lightspeedhq.nl":"17","lightspeedhq.be":"23","fr.lightspeedhq.be":"28","fr.lightspeedhq.com":"29","lightspeedhq.de":"18","lightspeedhq.com.au":"26","lightspeedhq.co.uk":"12"},"geo":{"CA":"1","US":"1","AG":"1","BS":"1","BB":"1","BZ":"1","CR":"1","CU":"1","DM":"1","DO":"1","GD":"1","GT":"1","HT":"1","HN":"1","JM":"1","NI":"1","PA":"1","KN":"1","LC":"1","VC":"1","TT":"1","AR":"19","BO":"19","BR":"19","CL":"19","CO":"19","EC":"19","FK":"19","GF":"19","GY":"19","PE":"19","PY":"19","SR":"19","UY":"19","VE":"19","MX":"19","BE":"23","LU":"23","NL":"17","DE":"18","AT":"18","CH":"18","AU":"26","NZ":"26"}}}};
+        ls_ga_tracking = {"rollup":{"tracking_id":"UA-69054797-5"}};
+        tracking_trackers = {"bots":["bot","spider","crawl","bingpreview"],"trackers":[{"name":"Bizible","object_name":"Bizible","location":{"global":true,"target":[]}},{"name":"Google Analytics","object_name":"ga","location":{"global":true,"target":[]}},{"name":"Segment","object_name":"analytics","location":{"global":false,"target":["hq"]}},{"name":"New Relic","object_name":"NewRelicClient","location":{"global":true,"target":[]}},{"name":"Google Tag Manager","object_name":"google_tag_manager","location":{"global":true,"target":[]}},{"name":"Autopilot","object_name":"Autopilot","location":{"global":false,"target":["hq"]}}]};
+    </script>
+    
+</div><script type="application/ld+json">{
+"@context": "http://schema.org",
+ "@type": "Organization",
+ "name": "Lightspeed",
+ "legalName" : "Lightspeed POS Inc",
+ "url": "https://www.lightspeedhq.com",
+ "logo": "https://www.lightspeedhq.com/wp-content/themes/ls/prod/img/ls-logos/ls-logo-RedBlack.png",
+ "foundingDate": "2005",
+ "alternateName": "Lightspeed HQ",
+ "description": "Lightspeed is a point-of-sale and e-commerce software provider based in Montreal, Canada. Lightspeed provides small and medium sized retail and restaurant businesses with point of sale solutions",
+ "founders": [
+                {
+                    "@type": "Person",
+                     "name": "Dax Dasilva"
+                 }
+              ],
+ "contactPoint": {
+ "@type": "ContactPoint",
+ "contactType": "customer support",
+ "telephone": "+1-514-907-1801",
+ "email": "info@lightspeedhq.com"
+ },
+  "address": {
+                 "@type": "PostalAddress",
+                 "streetAddress": "700 St-Antoine Est, Suite 300",
+                 "addressLocality": "Montreal",
+                 "postalCode": "H2Y1A6",
+                 "addressCountry": "CA"
+ },
+"sameAs": [
+                                                                                                                                                                                                                                  
+            "https://www.facebook.com/LightspeedHQ",
+                    "https://twitter.com/LightspeedHQ",
+                    "https://www.youtube.com/user/lightspeedretail",
+                    "https://www.instagram.com/lightspeedhq",
+                    "https://www.pinterest.com/hqlightspeed",
+                    "https://www.trustpilot.com/review/lightspeedhq.com"
+          ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.15",
+    "reviewCount": "178"
+  }
+}
+</script>
+</html>
