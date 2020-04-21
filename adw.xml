@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<report>
+    <report-name name='CAMPAIGN_PERFORMANCE_REPORT'/>
+    <date-range date='Apr 13, 2020-Apr 19, 2020'/>
+    <table>
+        <columns>
+            <column name='currency' display='Currency'/>
+            <column name='account' display='Account'/>
+            <column name='timeZone' display='Time zone'/>
+            <column name='advertisingSubChannel' display='Advertising Sub Channel'/>
+            <column name='advertisingChannel' display='Advertising Channel'/>
+            <column name='budget' display='Budget'/>
+            <column name='baseCampaignID' display='Base Campaign ID'/>
+            <column name='bidStrategyID' display='Bid Strategy ID'/>
+            <column name='bidStrategyName' display='Bid Strategy Name'/>
+            <column name='bidStrategyType' display='Bid Strategy Type'/>
+            <column name='budgetID' display='Budget ID'/>
+            <column name='desktopBidAdj' display='Desktop bid adj.'/>
+            <column name='campaignGroupID' display='Campaign Group ID'/>
+            <column name='campaignID' display='Campaign ID'/>
+            <column name='mobileBidAdj' display='Mobile bid adj.'/>
+            <column name='campaign' display='Campaign'/>
+            <column name='campaignState' display='Campaign state'/>
+            <column name='tabletBidAdj' display='Tablet bid adj.'/>
+            <column name='campaignTrialType' display='Campaign Trial Type'/>
+            <column name='conversionAdjustment' display='Conversion adjustment'/>
+            <column name='clientName' display='Client name'/>
+            <column name='endDate' display='End date'/>
+            <column name='enhancedCPCEnabled' display='Enhanced CPC enabled'/>
+            <column name='customerID' display='Customer ID'/>
+            <column name='finalURLSuffix' display='Final URL suffix'/>
+            <column name='hasRecommendedBudget' display='Has recommended Budget'/>
+            <column name='budgetExplicitlyShared' display='Budget explicitly shared'/>
+            <column name='labelIDs' display='Label IDs'/>
+            <column name='labels' display='Labels'/>
+            <column name='targetROASMaximizeConversionValue' display='Target ROAS (Maximize Conversion Value)'/>
+            <column name='budgetPeriod' display='Budget period'/>
+            <column name='recommendedBudgetAmount' display='Recommended Budget amount'/>
+            <column name='campaignServingStatus' display='Campaign serving status'/>
+            <column name='startDate' display='Start date'/>
+            <column name='totalBudgetAmount' display='Total Budget amount'/>
+            <column name='trackingTemplate' display='Tracking template'/>
+            <column name='customParameter' display='Custom parameter'/>
+            <column name='day' display='Day'/>
+        </columns>
+                <row campaignID='7762204259' budgetID='6581159701' campaign='Big Discount-Healthy and tasty Yogurt-37-1572424095385' campaignState='enabled' startDate='2019-10-31' endDate='2019-11-09' clicks='2' conversions='0.00' ctr='1.89%' cost='6337036' impressions='106' convRate='0.00%' avgCPC='3168518' viewThroughConv='0' costConv='0' advertisingChannel='Search' device='Mobile devices with full browsers'/>
+                <row campaignID='7762204245' budgetID='6581159701' campaign='Big Discount-Healthy and tasty Juce' campaignState='paused' startDate='2019-10-31' endDate='2019-11-12' clicks='234' conversions='0.57' ctr='12.89%' cost='3434' impressions='23423' convRate='1.00%' avgCPC='3434' viewThroughConv='0' costConv='0' advertisingChannel='Search' device='Mobile devices with full browsers'/>
+
+    </table>
+</report>
