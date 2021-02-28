@@ -8,6 +8,15 @@
     <language>en-ca</language>
     <lastBuildDate>Sat, 27 Feb 2021 13:21:55 -0500</lastBuildDate><atom:link href="https://eremeev.ca/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>cloudflare</title>
+      <link>https://eremeev.ca/tags/cloudflare/</link>
+      <pubDate>Sat, 27 Feb 2021 13:21:55 -0500</pubDate>
+      
+      <guid>https://eremeev.ca/tags/cloudflare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>golang</title>
       <link>https://eremeev.ca/tags/golang/</link>
       <pubDate>Sat, 27 Feb 2021 13:21:55 -0500</pubDate>
@@ -22,15 +31,6 @@
       <pubDate>Sat, 27 Feb 2021 13:21:55 -0500</pubDate>
       
       <guid>https://eremeev.ca/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>https://eremeev.ca/tags/personal/</link>
-      <pubDate>Sat, 27 Feb 2021 13:21:55 -0500</pubDate>
-      
-      <guid>https://eremeev.ca/tags/personal/</guid>
       <description></description>
     </item>
     
