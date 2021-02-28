@@ -1,6 +1,8 @@
 name = "eremeevca"
 type = "webpack"
+account_id = "18352558d044bc81dd45e0fb6956dd64"
 workers_dev = false
+zone_id = "051c25fda1c96802f8cd3d0a98a8c08f"
 route = "eremeev.ca/*"
 
 [site]
@@ -12,4 +14,6 @@ entry-point = "eremeevca"
 route = "eremeev.ca/*"
 
 [env.development]
+workers_dev = true
+name = "eremeevca-stage"
 route = "dev.eremeev.ca/*"
