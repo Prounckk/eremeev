@@ -2,6 +2,7 @@ name = "eremeevca"
 type = "webpack"
 workers_dev = true
 route = "eremeev.ca/*"
+account_id = "18352558d044bc81dd45e0fb6956dd64"
 
 [site]
 bucket = "./public"
