@@ -1,0 +1,15 @@
+name = "eremeevca"
+type = "webpack"
+workers_dev = true
+route = "eremeev.ca/*"
+
+[site]
+bucket = "./public"
+entry-point = "eremeevca"
+
+[env.production]
+# The route pattern your Workers application will be served at
+route = "eremeev.ca/*"
+
+[env.development]
+route = "dev.eremeev.ca/*"

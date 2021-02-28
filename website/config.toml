@@ -1,0 +1,37 @@
+baseURL = "https://eremeev.ca/"
+languageCode = "en-ca"
+title = "Sergei Eremeev"
+theme = "hugo-tania"
+paginate = 5
+
+[params]
+titleEmoji = '🧔'
+contentTypeName = "posts"
+colortheme = "light" # dark, light, white, or classic
+[params.socialOptions]
+github = "https://github.com/prounckk"
+instagram = "https://www.instagram.com/prounckk/"
+linkedin = "https://www.linkedin.com/in/sergeeremeev/"
+twitter = "https://twitter.com/prounckk"
+
+
+
+
+[menu]
+
+[[menu.header]]
+identifier = "cv"
+name = "CV"
+pre = "<i class='fa fa-heart'></i>"
+url = "/resume/"
+weight = -110
+
+# Menu links
+[[menu.header]]
+name = "Blog"
+weight = 1
+url  = "/articles/"
+
+[[menu.footer]]
+name = "RSS"
+url  = "/index.xml"
