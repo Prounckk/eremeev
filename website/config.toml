@@ -14,7 +14,8 @@ instagram = "https://www.instagram.com/prounckk/"
 linkedin = "https://www.linkedin.com/in/sergeeremeev/"
 twitter = "https://twitter.com/prounckk"
 
-
+[outputs]
+home = ["html","rss","json"] # Add json to the list
 
 
 [menu]

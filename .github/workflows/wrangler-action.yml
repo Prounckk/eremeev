@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to cloudflare workers
 
 on:
   push:
@@ -10,14 +10,33 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - uses: actions/checkout@v2
+      # Step 1 - Checks-out the repo
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Step 2 - Sets up the latest version of Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+            hugo-version: 'latest'
+
+        # Step 3 - Clean and don't fail
+      - name: Clean public directory
+        run: rm -rf website/public
+
+        # Step 4 - Builds the site using the latest version of Hugo
+      - name: Build
+        run: hugo
+        
+        # Step 5 - Publish the generated website to cloudflare Workers
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: 'website'
+          environment: 'production'
           preCommands: echo "*** pre command ***"
           postCommands: |
             echo "*** post commands ***"
-            wrangler publish --env production
+            wrangler publish
             echo "******"
