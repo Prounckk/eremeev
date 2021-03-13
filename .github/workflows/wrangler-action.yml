@@ -26,10 +26,10 @@ jobs:
 
         # Step 4 - Builds the site using the latest version of Hugo
       - name: Build
-        run: cd website && hugo
         with:
             name: website
             path: website/public
+        run: cd website && hugo
 
         # Step 5 - Publish the generated website to cloudflare Workers
       - name: Publish
