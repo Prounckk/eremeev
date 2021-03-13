@@ -21,15 +21,12 @@ jobs:
             hugo-version: 'latest'
 
         # Step 3 - Clean and don't fail
-      - name: Clean public directory
-        run: rm -rf website/public
+      # - name: Clean public directory
+      #  run: rm -rf public
 
         # Step 4 - Builds the site using the latest version of Hugo
       - name: Build
-        with:
-            name: website
-            path: website/public
-        run: cd website && hugo
+        run: hugo --minify
 
         # Step 5 - Publish the generated website to cloudflare Workers
       - name: Publish
@@ -37,9 +34,7 @@ jobs:
         env:
             USER: root
         with:
-          name: website
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          workingDirectory: 'website'
           preCommands: echo "*** pre command ***"
           postCommands: |
             echo "*** post commands ***"
