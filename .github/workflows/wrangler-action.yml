@@ -27,6 +27,9 @@ jobs:
         # Step 4 - Builds the site using the latest version of Hugo
       - name: Build
         run: cd website && hugo
+        with:
+          name: website
+          path: website/public
 
         # Step 5 - Publish the generated website to cloudflare Workers
       - name: Publish
@@ -34,6 +37,7 @@ jobs:
         env:
             USER: root
         with:
+          name: website
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: 'website'
           preCommands: echo "*** pre command ***"
@@ -41,4 +45,3 @@ jobs:
             echo "*** post commands ***"
             wrangler publish --env production
             echo "******"
-            
