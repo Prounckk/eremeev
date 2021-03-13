@@ -21,12 +21,12 @@ jobs:
             hugo-version: 'latest'
 
         # Step 3 - Clean and don't fail
-      # - name: Clean public directory
-      #  run: rm -rf public
+      - name: Clean public directory
+        run: rm -rf public
 
         # Step 4 - Builds the site using the latest version of Hugo
       - name: Build
-        run: hugo --minify
+        run: hugo
 
         # Step 5 - Publish the generated website to cloudflare Workers
       - name: Publish
