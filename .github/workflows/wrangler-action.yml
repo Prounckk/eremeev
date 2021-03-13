@@ -34,9 +34,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: 'website'
-          environment: 'production'
           preCommands: echo "*** pre command ***"
           postCommands: |
             echo "*** post commands ***"
-            wrangler publish
+            wrangler publish --env production
             echo "******"
