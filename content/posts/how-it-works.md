@@ -9,7 +9,7 @@ showFullContent = false
 subtitle = "this is blog post "
 +++
 
-I like Simon Sinek's ["Start with Why"](https://www.goodreads.com/book/show/7108725-start-with-why) approach. I feel it fits well with the decision log for most of my life projects. In the previous blog, I've tried to explain WHY I started the project, so today, let me focus on HOW. Probably, it will help me to understand WHAT I'm trying to archive with this.
+I like Simon Sinek's ["Start with Why"](https://www.goodreads.com/book/show/7108725-start-with-why) approach. I feel it fits well with the decision log for most of my life projects. In the [previous post](/posts/hello-world/) , I've tried to explain WHY I started the project, so today, let me focus on HOW. Probably, it will help me to understand WHAT I'm trying to archive with this.
 
 ## Backend
 This is a static website. I wanted to have something lightweight and easy to work with. I won't show you the massive list of static site generators. I will just say that Hugo[^1] is fast, written with golang and has clear documentation. I couldn't ask for more.
@@ -19,7 +19,7 @@ This is a static website. I wanted to have something lightweight and easy to wor
 I have nothing against PHP; it's a good and powerful language. This book was just too old 😁
 
 ## Frontend
-This blog post is a simple MD file that is parsed by Hudo and wrapped with love to a hugo-tania theme[^2]. So far, I just did some twigs at template files and didn't touch any JS or CSS files. Will I do it shortly? I hope not, but I will add some functionality with Rust code compiled into WebAssembly (wasm)
+This blog post is a simple MD file that is parsed by Hugo and wrapped with love to a hugo-tania theme[^2]. So far, I just did some twigs at template files and didn't touch any JS or CSS files. Will I do it shortly? I hope not, but I will add some functionality with Rust code compiled into WebAssembly (wasm)
 
 
 ## Hosting
@@ -85,7 +85,7 @@ The Lighthouse shows good numbers, but there is room for improvements. SEO is no
 
 
 
-Now, based on WHY and HOW I can say WHAT the blog is about. It's my learning platform, where I try things, improve my codding and English skills.
+Now, based on WHY and HOW I can say WHAT the blog is about. It's my learning platform, where I try things, improve my coding and English skills.
 
 
 

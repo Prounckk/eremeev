@@ -28,7 +28,7 @@ I've just renewed the domain name, and I have no more excuse not to use it — t
 ## Tech stack
 
 Back End of the site is managed by [Hugo](https://gohugo.io/), a static site generator written in Go.
-As you might guess, for the first blog post, I didn't write any rust code, but I promise I will! Currently, the site is on my local but will be hosted soon at Cloudflare Workers with backup at Github pages.
+As you might guess, for the first blog post, I didn't write any rust code, but I promise I will! Currently, the site is on my local but will be hosted soon at Cloudflare Workers with backup at Github pages. Read more about [how all this works](/posts/how-it-works/)!
 
 
 Wish me luck! 
