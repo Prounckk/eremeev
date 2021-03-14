@@ -16,7 +16,7 @@ This is a static website. I wanted to have something lightweight and easy to wor
 
 ![alt text](/2021/php5torecicling.webp "Man throws a PHP guide book into the trash can")
 ### P.S.
-I have nothing against PHP; it's a good language and powerful language. This book was just too old 😁
+I have nothing against PHP; it's a good and powerful language. This book was just too old 😁
 
 ## Frontend
 This blog post is a simple MD file that is parsed by Hudo and wrapped with love to a hugo-tania theme[^2]. So far, I just did some twigs at template files and didn't touch any JS or CSS files. Will I do it shortly? I hope not, but I will add some functionality with Rust code compiled into WebAssembly (wasm)
@@ -33,7 +33,7 @@ The deployment process is so simple and powerful at the same time.
 
 I had two options: CircleCi or Github Actions. The first one, we use heavily at work. Why should I copy-paste a working solution? I'm not looking for an easy way. 😁 Needless to say, I use for this blog Github Actions.
 What we do here.
-Check the code from repo [here](https://github.com/Prounckk/eremeev/blob/master/.github/workflows/wrangler-action.yml
+[Check the code from repo](https://github.com/Prounckk/eremeev/blob/master/.github/workflows/wrangler-action.yml
 )
 ```YAML
       # Step 1 - Checks-out the repo
@@ -75,7 +75,19 @@ And publishing at cloudflare. Here I'm using Wrangler, an official CLI.
 ```
 All of this is not rocket science but does its job.
 
+## Nameservers and Analytics
+Cloudflare knows as a nameserver, but it also has [Analytics](https://www.cloudflare.com/analytics/). It's not as advanced as Google Analytics but can provide a website owner with all the primary data, such as visits, status codes, the most popular pages, etc.
+
+
+## Results
+The Lighthouse shows good numbers, but there is room for improvements. SEO is not 100% because of missing meta description.
+![alt text](/2021/lighthouse-report-for-eremeevca.png "Lighthouse reports shows good numbers for eremeev.ca")
+
+
+
 Now, based on WHY and HOW I can say WHAT the blog is about. It's my learning platform, where I try things, improve my codding and English skills.
+
+
 
 [^1]: [Hugo: A Fast and Flexible Static Site Generator](https://gohugo.io/)
 [^2]: [This theme is created by Tania Rascia](https://github.com/taniarascia)
