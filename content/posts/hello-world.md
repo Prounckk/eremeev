@@ -9,7 +9,7 @@ showFullContent = false
 subtitle = "let's start"
 +++
 
-This post is the first blog article created at Eremeeva.CA. All devs start their journey with Hello World!
+This is the first post created at Eremeev.CA. All devs start their journey with Hello World!
 So do I.
 This is not my first attempt to start a blog. I used to have one at [prounckk.wordpress.com](https://web.archive.org/web/20140427173309/https://prounckk.wordpress.com/). It was about my life in Canada and was created to share photos, impressions and thoughts with my friends that stayed in my country of origin.
 But it was not the first one! Back in high school, I was a teenager that likes to write poems. Don't judge me; who didn't write poetry as a teenager!? I still remember the address: fried.to.kg, but unfortunately, web-archive didn't store any peace of my first ever blog.
