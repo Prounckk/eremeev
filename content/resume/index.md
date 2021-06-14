@@ -8,7 +8,7 @@ description: "Resume of Sergei Eremeev an SRE and Golang Developer from North Am
 ---
 ## About Me
 
-Software developer and Site Reliability Engineer (SRE) based in the Eastern Standard Time (UTC-5)
+Backend Team Lead and Site Reliability Engineer (SRE) based in the Eastern Standard Time (UTC-5)
 Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD)
 
 ## Summary
@@ -16,7 +16,7 @@ Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD
 * Over 4+ years of experience in Golang and PHP. Excellent debugging and problem-solving skills with ability to work as Lead Developer.
 * Good experience with Docker and Kubernetes. Extensive knowledge in using Git
 * Hands-On experience with Google Cloud[^1] and AWS, Digital Ocean and Data Packet (ex-10gbps.io)
-* Implemented REST services by Golang with microservices architecture.
+* Implemented REST-API services by Golang with microservices architecture.
 * Working with LinkedIn, SalesForce, Hubspot and other APIs  
 * Experience in using Agile, SCRUM and Waterfall methodology to deliver IT projects[^2].
 * Worked on CI/CD tool CircleCI to automate the build process from version control tool (GitHub) into testing and production environment.
@@ -24,7 +24,15 @@ Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD
 
 ## Work Experience
 
-**SRE / Backend developer, Lightspeed** (Jan 2020-present, Montreal, QC)
+**Backend Team Lead / SRE, Lightspeed** (Apr 2021-present, Montreal, QC)
+
+- Manage marketing infrastructure and lead 2 back-end developers
+- Programming with Golang, PHP, some JavaScript for Cloudflare workers apps
+- Encourage devs to share knowledge and challenge the status quo
+- Won #makeithappen award at company level 
+- 24/7 on-call
+
+**SRE / Backend developer, Lightspeed** (Jan 2020-Apr 2021, Montreal, QC)
 
 - Maintains a critical for business Golang application
 - Set SLOs and SLIs for marketing projects
@@ -33,7 +41,7 @@ Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD
 - Programming with Golang, PHP, some JavaScript for Cloudflare workers apps
 - Manage marketing infrastructure and lead 2 back-end developers
 - 24/7 on-call
-- won #makeithappen award
+- won #makeithappen award of marketing department
 
 **Junior DevOps, Lightspeed** (Aug 2019-Jan 2020, Montreal, QC)
 - Coordinate development and deployment, release management
@@ -50,7 +58,7 @@ Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD
 - 20% increase in organic leads
 
 **SEO Associate, MindGeek** (July 2015-Aug 2017, Montreal, QC)
-- Performed keyword analysis, created brands and long-tail keywords combinations
+- Performed keyword analysis, created brand and long-tail keywords combinations
 - On-page and Off-page optimization
 - *Achievements:*
     - Created  Enhanced E-Commerce set-up increased the visibility of transaction as a result increased conversion on corporate websites
