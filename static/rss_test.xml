@@ -9,8 +9,8 @@
 
     <channel>
         <title>Verticals &#8211; Lightspeed POS</title>
-        <atom:link href="http://local.lightspeedhq.com/feed/?post_type=verticals" rel="self" type="application/rss+xml" />
-        <link>http://local.lightspeedhq.com</link>
+        <atom:link href="https://www.lightspeedhq.com/feed/?post_type=verticals" rel="self" type="application/rss+xml" />
+        <link>https://www.lightspeedhq.com</link>
         <description></description>
         <lastBuildDate>Mon, 07 Jun 2021 20:11:09 +0000</lastBuildDate>
         <language>en-US</language>
@@ -21,8 +21,8 @@
         
             <item>
                 <title>Liquor store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/liquor-point-of-sale/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/liquor-point-of-sale/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/liquor-point-of-sale/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/liquor-point-of-sale/#respond</comments>
                 <pubDate>Mon, 22 Jun 2020 19:03:22 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -36,8 +36,8 @@
             </item>
                     <item>
                 <title>Golf &#8211; Municipal</title>
-                <link>http://local.lightspeedhq.com/pos/retail/municipal/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/municipal/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/municipal/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/municipal/#respond</comments>
                 <pubDate>Thu, 28 May 2020 22:16:10 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -50,8 +50,8 @@
             </item>
                     <item>
                 <title>Golf &#8211; Resort</title>
-                <link>http://local.lightspeedhq.com/pos/retail/resorts/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/resorts/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/resorts/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/resorts/#respond</comments>
                 <pubDate>Thu, 28 May 2020 21:36:43 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -64,8 +64,8 @@
             </item>
                     <item>
                 <title>Golf &#8211; Multi Course</title>
-                <link>http://local.lightspeedhq.com/pos/retail/multi-course/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/multi-course/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/multi-course/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/multi-course/#respond</comments>
                 <pubDate>Thu, 28 May 2020 21:17:26 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -78,8 +78,8 @@
             </item>
                     <item>
                 <title>Golf &#8211; Private</title>
-                <link>http://local.lightspeedhq.com/pos/retail/private/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/private/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/private/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/private/#respond</comments>
                 <pubDate>Thu, 28 May 2020 20:33:45 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -92,8 +92,8 @@
             </item>
                     <item>
                 <title>Golf &#8211; Semi Private</title>
-                <link>http://local.lightspeedhq.com/pos/retail/semi-private/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/semi-private/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/semi-private/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/semi-private/#respond</comments>
                 <pubDate>Thu, 28 May 2020 19:53:46 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -106,8 +106,8 @@
             </item>
                     <item>
                 <title>Golf &#8211; Public</title>
-                <link>http://local.lightspeedhq.com/pos/retail/public/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/public/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/public/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/public/#respond</comments>
                 <pubDate>Thu, 28 May 2020 19:01:11 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -120,8 +120,8 @@
             </item>
                     <item>
                 <title>CBD POS draft</title>
-                <link>http://local.lightspeedhq.com/pos/retail/cbd-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/cbd-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/cbd-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/cbd-pos/#respond</comments>
                 <pubDate>Wed, 22 Apr 2020 19:41:17 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -135,8 +135,8 @@
             </item>
                     <item>
                 <title>Vape Store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/vape-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/vape-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/vape-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/vape-store-pos/#respond</comments>
                 <pubDate>Wed, 15 Apr 2020 18:01:02 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -150,8 +150,8 @@
             </item>
                     <item>
                 <title>Full service POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/full-service-pos-software/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/full-service-pos-software/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/full-service-pos-software/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/full-service-pos-software/#respond</comments>
                 <pubDate>Wed, 15 Apr 2020 17:50:17 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -165,8 +165,8 @@
             </item>
                     <item>
                 <title>Hotel restaurant POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/hotel-epos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/hotel-epos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/hotel-epos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/hotel-epos/#respond</comments>
                 <pubDate>Wed, 15 Apr 2020 17:46:11 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -180,8 +180,8 @@
             </item>
                     <item>
                 <title>Bar POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/bar-pos-system/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/bar-pos-system/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/bar-pos-system/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/bar-pos-system/#respond</comments>
                 <pubDate>Wed, 15 Apr 2020 17:43:17 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -195,8 +195,8 @@
             </item>
                     <item>
                 <title>QSR POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/quick-service-restaurant-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/quick-service-restaurant-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/quick-service-restaurant-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/quick-service-restaurant-pos/#respond</comments>
                 <pubDate>Wed, 15 Apr 2020 17:41:17 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -210,8 +210,8 @@
             </item>
                     <item>
                 <title>Cafe POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/bakery-and-cafe-pos-system/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/bakery-and-cafe-pos-system/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/bakery-and-cafe-pos-system/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/bakery-and-cafe-pos-system/#respond</comments>
                 <pubDate>Wed, 15 Apr 2020 17:30:20 +0000</pubDate>
                 <dc:creator><![CDATA[Alix Fraser]]></dc:creator>
                 
@@ -225,8 +225,8 @@
             </item>
                     <item>
                 <title>Bike Shop POS 2</title>
-                <link>http://local.lightspeedhq.com/pos/retail/bike-shop/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/bike-shop/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/bike-shop/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/bike-shop/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:58:05 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -240,8 +240,8 @@
             </item>
                     <item>
                 <title>Jewellery store POS system</title>
-                <link>http://local.lightspeedhq.com/pos/retail/jewellery-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/jewellery-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/jewellery-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/jewellery-store-pos/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:56:10 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -255,8 +255,8 @@
             </item>
                     <item>
                 <title>Apparel POS System</title>
-                <link>http://local.lightspeedhq.com/pos/retail/apparel/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/apparel/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/apparel/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/apparel/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:54:14 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -270,8 +270,8 @@
             </item>
                     <item>
                 <title>Toy Store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/toy-store-point-of-sale/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/toy-store-point-of-sale/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/toy-store-point-of-sale/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/toy-store-point-of-sale/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:50:05 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -285,8 +285,8 @@
             </item>
                     <item>
                 <title>Sporting goods POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/sporting-goods-point-of-sale/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/sporting-goods-point-of-sale/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/sporting-goods-point-of-sale/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/sporting-goods-point-of-sale/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:41:24 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -300,8 +300,8 @@
             </item>
                     <item>
                 <title>Health POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/supplement-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/supplement-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/supplement-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/supplement-store-pos/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:37:12 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -315,8 +315,8 @@
             </item>
                     <item>
                 <title>Pets POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/pet-shop-point-of-sale/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/pet-shop-point-of-sale/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/pet-shop-point-of-sale/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/pet-shop-point-of-sale/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:35:34 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -330,8 +330,8 @@
             </item>
                     <item>
                 <title>Electronics POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/electronics-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/electronics-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/electronics-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/electronics-store-pos/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:32:01 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -345,8 +345,8 @@
             </item>
                     <item>
                 <title>Home decor store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/home-decor-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/home-decor-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/home-decor-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/home-decor-store-pos/#respond</comments>
                 <pubDate>Tue, 18 Feb 2020 14:29:26 +0000</pubDate>
                 <dc:creator><![CDATA[Tess Bemporat]]></dc:creator>
                 
@@ -360,8 +360,8 @@
             </item>
                     <item>
                 <title>Fine Dining</title>
-                <link>http://local.lightspeedhq.com/pos/retail/fine-dining/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/fine-dining/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/fine-dining/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/fine-dining/#respond</comments>
                 <pubDate>Tue, 05 Nov 2019 07:49:12 +0000</pubDate>
                 <dc:creator><![CDATA[Meghan O'Neil]]></dc:creator>
                 
@@ -375,8 +375,8 @@
             </item>
                     <item>
                 <title>Golf course POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/golf-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/golf-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/golf-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/golf-pos/#respond</comments>
                 <pubDate>Wed, 29 May 2019 13:46:45 +0000</pubDate>
                 <dc:creator><![CDATA[Étienne Leprette]]></dc:creator>
                 
@@ -395,8 +395,8 @@
             </item>
                     <item>
                 <title>Adult store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/adult-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/adult-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/adult-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/adult-store-pos/#respond</comments>
                 <pubDate>Wed, 04 Jan 2017 21:16:07 +0000</pubDate>
                 <dc:creator><![CDATA[Lightspeed]]></dc:creator>
                 
@@ -406,8 +406,8 @@
                                                                                     <author>Lightspeed</author>            </item>
                     <item>
                 <title>Music Store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/music-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/music-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/music-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/music-store-pos/#respond</comments>
                 <pubDate>Tue, 26 Jul 2016 21:39:21 +0000</pubDate>
                 <dc:creator><![CDATA[Ellie Lord]]></dc:creator>
                 
@@ -417,8 +417,8 @@
                                                                                     <author>Ellie Lord</author>            </item>
                     <item>
                 <title>Campus POS System</title>
-                <link>http://local.lightspeedhq.com/pos/retail/campus-pos-system/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/campus-pos-system/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/campus-pos-system/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/campus-pos-system/#respond</comments>
                 <pubDate>Tue, 26 Jul 2016 21:39:17 +0000</pubDate>
                 <dc:creator><![CDATA[Ellie Lord]]></dc:creator>
                 
@@ -430,8 +430,8 @@
             </item>
                     <item>
                 <title>Fireworks store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/fireworks-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/fireworks-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/fireworks-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/fireworks-store-pos/#respond</comments>
                 <pubDate>Mon, 27 Jun 2016 21:39:16 +0000</pubDate>
                 <dc:creator><![CDATA[Malik Kane]]></dc:creator>
                 
@@ -441,8 +441,8 @@
                                                                                     <author>Malik Kane</author>            </item>
                     <item>
                 <title>Craft Store POS</title>
-                <link>http://local.lightspeedhq.com/pos/retail/craft-store-pos/</link>
-                <comments>http://local.lightspeedhq.com/pos/retail/craft-store-pos/#respond</comments>
+                <link>https://www.lightspeedhq.com/pos/retail/craft-store-pos/</link>
+                <comments>https://www.lightspeedhq.com/pos/retail/craft-store-pos/#respond</comments>
                 <pubDate>Thu, 19 May 2016 18:46:22 +0000</pubDate>
                 <dc:creator><![CDATA[Cedric Montana]]></dc:creator>
                 
