@@ -9,12 +9,18 @@ showFullContent = false
 +++
 
 This week I celebrate four years at Lightspeed. I'm very grateful to the Marketing team for having confidence in me and allowing me to be a part of this rocketship 🚀.
+![alt text](https://assets.lightspeedhq.com/img/9046ab39-lightspeed-share-image.jpg "Lightspeed is hiring!")
 
-I remember the first month. It's all was about excitement! Friday beer 🍻🍻🍻, really? Can I really have a beer at work? New macbook (it was the first in my life), what? Team outing? What? Again beer? 🍻 No way! Can I get this tool for my work? What do you mean I don't have to get +100000 approvals and wait until IT install it? What do you mean you don't need to log every hour and meeting time?
+I remember the first month. It's all was about excitement! Friday beer 🍻🍻🍻, really? Can I really have a beer at work? New macbook (it was the first in my life), what? Team outing? What? Again beer? 🍻 No way! Can I get this tool for my work? What do you mean I don't have to get +100000 approvals and wait until IT install it? What do you mean I don't need to log every hour and meeting time?
 
 After this "honeymoon," I've got clear understanding that all doesn't matter but results. When I was reading a review at Glassdoor, I saw "work hard, play hard," I didn't think this is so true. But we worked hard; we had crazy parties. Every month from zero to hero, to reach new goals and new horizons.
 
-Four years passed, two successful IPOs, Multiple acquisitions, Pandemic, but we are still young and a little bit crazy. We have great corporate culture and outstanding leaders!
+Four years passed, two successful IPOs, Multiple acquisitions, Pandemic, but we are still young and a little bit crazy. We have great corporate culture and outstanding leaders!  
+
+### We are hiring! 
+You still have a chance to join this amazing company. [Click here](https://grnh.se/ngab52f21)!  
+
+### Special thanks
 I want to thank everyone I worked with, but this blog post will be just a list of Lightspeeders and ex-Lightspeeders.
 ### To make it shorter, special thanks to:
 * **Lory Ajamian**, you are a great example of a leader and true Lightspeeder.
