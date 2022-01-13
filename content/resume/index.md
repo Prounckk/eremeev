@@ -8,10 +8,10 @@ description: "Resume of Sergei Eremeev an SRE and Golang Developer from North Am
 ---
 ## About Me
 Backend Developer and Site Reliability Engineer (SRE) based in the Eastern Standard Time (UTC-5)
+
 Managed marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD), but now discovering the world of Java.
 
-I'm the guy, that still in slack until midnight and creates PR on weekends, just because I like what I'm doing! 
-
+I’m the guy, that is still in slack until midnight and creates PRs on weekends, just because I like programming and solving problems.
 
 ## Summary
 
