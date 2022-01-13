@@ -7,14 +7,16 @@ description: "Resume of Sergei Eremeev an SRE and Golang Developer from North Am
 
 ---
 ## About Me
+Backend Developer and Site Reliability Engineer (SRE) based in the Eastern Standard Time (UTC-5)
+Managed marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD), but now discovering the world of Java.
 
-Backend Team Lead and Site Reliability Engineer (SRE) based in the Eastern Standard Time (UTC-5)
-Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD)
+I'm the guy, that still in slack until midnight and creates PR on weekends, just because I like what I'm doing! 
+
 
 ## Summary
 
-* Over 4+ years of experience in Golang and PHP. Excellent debugging and problem-solving skills with ability to work as Lead Developer.
-* Good experience with Docker and Kubernetes. Extensive knowledge in using Git
+* Over 4+ years of experience in Golang and PHP. Excellent debugging and problem-solving skills.
+* Good experience with Docker. Extensive knowledge in using Git
 * Hands-On experience with Google Cloud[^1] and AWS, Digital Ocean and Data Packet (ex-10gbps.io)
 * Implemented REST-API services by Golang with microservices architecture.
 * Working with LinkedIn, SalesForce, Hubspot and other APIs  
@@ -24,7 +26,11 @@ Managing marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD
 
 ## Work Experience
 
-**Backend Team Lead / SRE, Lightspeed** (Apr 2021-present, Montreal, QC)
+**Java Software Engineer, Plusgrade** (Nov 2021-present , Montreal, QC)
+- Active participation in the development process since the 1st day of the
+- To be honest, nothing exciting to share, I've just started ;) 
+
+**Backend Team Lead / SRE, Lightspeed** (Apr 2021-Nov 2021, Montreal, QC)
 
 - Manage marketing infrastructure and lead 2 back-end developers
 - Programming with Golang, PHP, some JavaScript for Cloudflare workers apps
