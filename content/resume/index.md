@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-date: "2021-02-27T13:21:55-05:00"
+date: "2022-01-15T13:21:55-05:00"
 draft: false
 description: "Resume of Sergei Eremeev an SRE and Golang Developer from North America, Canada, Montreal - UTC-5"
 
