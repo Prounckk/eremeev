@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-date: "2022-01-15T13:21:55-05:00"
+date: "2022-04-01T13:21:55-05:00"
 draft: false
 description: "Resume of Sergei Eremeev an SRE and Golang Developer from North America, Canada, Montreal - UTC-5"
 
@@ -26,9 +26,12 @@ I’m the guy, that is still in slack until midnight and creates PRs on weekends
 
 ## Work Experience
 
-**Java Software Engineer, Plusgrade** (Nov 2021-present , Montreal, QC)
+**Senior Software Engineer, Contobox** (April 2022-present , Montreal, QC)
+- Move back to Golang  
+- To be honest, nothing exciting to share, I've just started ;)
+
+**Java Software Engineer, Plusgrade** (Nov 2021-April 2022 , Montreal, QC)
 - Active participation in the development process since the 1st day of the
-- To be honest, nothing exciting to share, I've just started ;) 
 
 **Backend Team Lead / SRE, Lightspeed** (Apr 2021-Nov 2021, Montreal, QC)
 
