@@ -97,10 +97,10 @@ So, let's compare the results!
 Copy works not just faster but also requires only one memory allocation!
 
 ```aidl
-Benchmark_withCopy/slice_of_100_floats          13212572	     88.00 ns/op	     896 B/op	       1 allocs/op
-Benchmark_withCopy/slice_of_10000_floats          268584	      4456 ns/op	   81920 B/op	       1 allocs/op
-Benchmark_WithAppend/slice_of_100_floats         4772218	     252.5 ns/op	    2480 B/op	       5 allocs/op
-Benchmark_WithAppend/slice_of_10000_floats         57997	     18985 ns/op	  356224 B/op	      12 allocs/op
+Benchmark_withCopy/slice_of_100_floats      88.00 ns/op	     896 B/op    1 allocs/op
+Benchmark_withCopy/slice_of_10000_floats     4456 ns/op	   81920 B/op    1 allocs/op
+Benchmark_WithAppend/slice_of_100_floats    252.5 ns/op	    2480 B/op    5 allocs/op
+Benchmark_WithAppend/slice_of_10000_floats  18985 ns/op	  356224 B/op   12 allocs/op
 ```
 
 Looks good, right?
@@ -123,13 +123,15 @@ func mergeTwoSliceOfFloatsWithAppendToSliceWithSize(floatsToIterate []float64, f
 Running our benchmark on the same set of floats
 
 ```aidl
-Benchmark_withCopy/slice_of_100_floats          13212572	     88.00 ns/op	     896 B/op	       1 allocs/op
-Benchmark_withCopy/slice_of_10000_floats          268584	      4456 ns/op	   81920 B/op	       1 allocs/op
-Benchmark_WithAppend/slice_of_100_floats         4772218	     252.5 ns/op	    2480 B/op	       5 allocs/op
-Benchmark_WithAppend/slice_of_10000_floats         57997	     18985 ns/op	  356224 B/op	      12 allocs/op
-Benchmark_withAppendToDefinedSlice/100_floats    6300037	     193.8 ns/op	    2688 B/op	       2 allocs/op
-Benchmark_withAppendToDefinedSlice/10000_floats    50028	     23807 ns/op	  507904 B/op	       4 allocs/op
+Benchmark_withCopy/slice_of_100_floats              88.00 ns/op	     896 B/op    1 allocs/op
+Benchmark_withCopy/slice_of_10000_floats             4456 ns/op	   81920 B/op    1 allocs/op
+Benchmark_WithAppend/slice_of_100_floats            252.5 ns/op	    2480 B/op    5 allocs/op
+Benchmark_WithAppend/slice_of_10000_floats          18985 ns/op	  356224 B/op   12 allocs/op
+Benchmark_withAppendToDefinedSlice/100_floats       193.8 ns/op	    2688 B/op    2 allocs/op
+Benchmark_withAppendToDefinedSlice/10000_floats     23807 ns/op	  507904 B/op    4 allocs/op
 ```
 Append with a predefined slice seems to be working better. It does less memory allocation. Did it help? Not really! It's slower than regular append, and it takes 2x times more spaces in memory now than it needs. Append() do not use the slice with predefined length but add a new slice at its end, so the first part of our new slice is empty but takes space in memory. Just try to run the code with a debugger or print the function's output.
+
+[Code is here](https://github.com/Prounckk/eremeev/blob/main/code-examples/append-vs-copy_test.go), please feel free to modify and run your personal benchmarks
 
 What can I say? I was hoping to get similar results, but tests never lie. copy() works faster and needs fewer memory allocations, but the readability of the code is not the selling point of copy() function. I will use append() in my code if I foresee that nobody will pass a massive chunk of data. Most developers know this function, and speaking of trade-offs, I prefer not to spend expensive dev time understanding the code, but add a few bucks on memory. But if the code expects to be performance-focused, then copy(), and some additional lines of comments would be my to-go option. 
