@@ -85,5 +85,5 @@ Cheers! Happy codding!
 
 ## Links 
 
-[Benchmarks code is here](https://github.com/Prounckk/eremeev/blob/main/code-examples/string-formating_test), please feel free to modify and run your personal benchmarks
+[Benchmarks code is here](https://github.com/Prounckk/eremeev/blob/main/code-examples/string-formating_test.go), please feel free to modify and run your personal benchmarks
 
