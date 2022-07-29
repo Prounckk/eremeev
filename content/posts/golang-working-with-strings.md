@@ -27,9 +27,11 @@ import (
 
 func main() {
 	hello := "Hello World"
-	fmt.Println(hello[0])   // prints H
-	fmt.Println(hello[1])   // prints e
-	fmt.Println(len(hello)) // prints 12
+	fmt.Println(hello[0])   // prints 72. Why? bcs it's uint8 representation of the letter "H"
+	fmt.Printf("%c\n", hello[0])  // prints H
+	fmt.Println(hello[1])   // prints 101
+	fmt.Printf("%c\n", hello[1])  // prints e. You know why, right? 
+	fmt.Println(len(hello)) // prints 11
 
 	// hello[0] = "h"      // throws error "cannot assign to hello[0] (value of type byte)" AAAA what to do!?
 	runes := []rune(hello)    // convert to rune slice
