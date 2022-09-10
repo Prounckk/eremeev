@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-date: "2022-04-01T13:21:55-05:00"
+date: "2022-09-01T13:21:55-05:00"
 draft: false
 description: "Resume of Sergei Eremeev an SRE and Golang Developer from North America, Canada, Montreal - UTC-5"
 
@@ -9,7 +9,7 @@ description: "Resume of Sergei Eremeev an SRE and Golang Developer from North Am
 ## About Me
 Backend Developer and Site Reliability Engineer (SRE) based in the Eastern Standard Time (UTC-5)
 
-Managed marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD), but now discovering the world of Java.
+Managed marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD), but now focusing on building, testing and shipping code. 
 
 I’m the guy, that is still in slack until midnight and creates PRs on weekends, just because I like programming and solving problems.
 
@@ -28,10 +28,11 @@ I’m the guy, that is still in slack until midnight and creates PRs on weekends
 
 **Senior Software Engineer, Contobox** (April 2022-present , Montreal, QC)
 - Move back to Golang  
-- To be honest, nothing exciting to share, I've just started ;)
+- Implemented Logstash data pipeline to sync data from MySQL to OpenSearch
+- Implemented Data Base migration process and automated it with Github Actions
 
 **Java Software Engineer, Plusgrade** (Nov 2021-April 2022 , Montreal, QC)
-- Active participation in the development process since the 1st day of the
+- Active participation in the development process since the 1st day
 
 **Backend Team Lead / SRE, Lightspeed** (Apr 2021-Nov 2021, Montreal, QC)
 
