@@ -1,6 +1,6 @@
 +++
 title = "My first marathon"
-date = "2022-05-17"
+date = "2022-10-15"
 author = "prounckk"
 tags = ["sport", "marathon", "running"]
 keywords = ["sport", "marathon", "running"]
