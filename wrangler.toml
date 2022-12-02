@@ -4,6 +4,7 @@ account_id = "18352558d044bc81dd45e0fb6956dd64"
 workers_dev = false
 zone_id = "051c25fda1c96802f8cd3d0a98a8c08f"
 route = "eremeev.ca/*"
+compatibility_date = "2022-04-05"
 
 [site]
 bucket = "./public"
