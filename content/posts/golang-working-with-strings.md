@@ -2,7 +2,7 @@
 title = "Golang: Strings Concatenating "
 date = "2022-07-29"
 author = "prounckk"
-tags = ["golang"]
+tags = ["golang","data structure"]
 keywords = ["golang", "benchmark","string", "concatenating"]
 description = ""
 showFullContent = false
