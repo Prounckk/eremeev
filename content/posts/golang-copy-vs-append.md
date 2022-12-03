@@ -4,9 +4,7 @@ date = "2022-05-17"
 author = "prounckk"
 tags = ["golang","data structure"]
 keywords = ["golang", "benchmark", "data structure", "append vs copy"]
-description = "Working with data structures is part of our daily routine, and most of the time, developers do not care what is happening
-under the hood. We add or delete elements, sort them or iterate through them to find what we need. But let's see how our
-daily code changes might impact performance."
+description = "Working with data structures is part of our daily routine, and most of the time, developers do not care what is happening under the hood. We add or delete elements, sort them or iterate through them to find what we need. But let's see how our daily code changes might impact performance."
 showFullContent = false
 +++
 
