@@ -2,9 +2,9 @@
 title = "Golang & GitHub Actions: Test coverage and show badge"
 date = "2022-11-02"
 author = "prounckk"
-tags = ["golang"]
+tags = ["golang", "github actions"]
 keywords = ["golang", "benchmark", "test", "coverage", "github actions"]
-description = ""
+description = "There is plenty of services to test code, generate badges and show the data. But what if the budget is tight and the code should not leave the repository, for a legal reason, for example?"
 showFullContent = false
 +++
 

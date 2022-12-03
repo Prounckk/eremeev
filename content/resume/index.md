@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-date: "2022-09-01T13:21:55-05:00"
+date: "2022-11-01T13:21:55-05:00"
 draft: false
 description: "Resume of Sergei Eremeev an SRE and Golang Developer from North America, Canada, Montreal - UTC-5"
 
@@ -11,7 +11,7 @@ Backend Developer and Site Reliability Engineer (SRE) based in the Eastern Stand
 
 Managed marketing infrastructure at Lightspeed POS Inc. (NYSE: LSPD) (TSX: LSPD), but now focusing on building, testing and shipping code. 
 
-I’m the guy, that is still in slack until midnight and creates PRs on weekends, just because I like programming and solving problems.
+I’m the nerd that still in Slack until midnight and creates PRs on weekends just because I like programming and solving problems.
 
 ## Summary
 
