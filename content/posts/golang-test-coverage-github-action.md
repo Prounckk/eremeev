@@ -84,6 +84,7 @@ and update README file to have a link to the badge
 ![Coverage](https://github.com/Prounckk/ZTM-DS-and-Algo-Golang/blob/badge/badge.svg?branch=badge)
 
 ```
+  
 ![Coverage](https://github.com/Prounckk/ZTM-DS-and-Algo-Golang/blob/badge/badge.svg?branch=badge)
 
 On more push to the repo and ... It worked!  
