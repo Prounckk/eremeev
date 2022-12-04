@@ -85,7 +85,7 @@ and update README file to have a link to the badge
 
 ```
   
-![Coverage](https://github.com/Prounckk/ZTM-DS-and-Algo-Golang/blob/badge/badge.svg?branch=badge "Coverage").  
+![Coverage](/2022/badge.svg "Coverage").  
 
 On more push to the repo and ... It worked!  
 Needless to say, don't copy-paste the link to your readme file unless you want to share my shaming results.
