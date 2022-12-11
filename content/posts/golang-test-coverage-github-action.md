@@ -1,6 +1,6 @@
 +++
 title = "Golang & GitHub Actions: Test coverage and show badge"
-date = "2022-11-02"
+date = "2022-12-02"
 author = "prounckk"
 tags = ["golang", "github actions"]
 keywords = ["golang", "benchmark", "test", "coverage", "github actions"]
@@ -85,7 +85,7 @@ and update README file to have a link to the badge
 
 ```
   
-![Coverage](/2022/badge.svg "Coverage").  
+![Coverage](/2022/badge.svg "Coverage")  
 
 On more push to the repo and ... It worked!  
 Needless to say, don't copy-paste the link to your readme file unless you want to share my shaming results.
