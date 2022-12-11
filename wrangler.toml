@@ -2,8 +2,7 @@ name = "eremeevca"
 account_id = "18352558d044bc81dd45e0fb6956dd64"
 workers_dev = false
 compatibility_date = "2022-04-05"
-main = "eremeevca/index.html"
-
+main = "eremeevca/index.js"
 
 [site]
 bucket = "./public"
