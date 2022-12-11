@@ -19,10 +19,7 @@ Here is an example of how it can help you to write faster:
 
 Look how it finished my sentence! I had to make some changes to make it sounds like my accent ;) But in general, it was a good start.
 
-Let's try to write a code somehow related to daily tasks:
-![One more example of GitHub Copilot](/2022/githubcopilot-faster.gif "One more example of GitHub Copilot")
-
-What about writing code based on comments? 
+What about writing code?
 ![](/2022/github-copilot-bubble-sorting-go.gif )
 I've tried to run the function that was written by Copilot, and [it worked](https://play.golang.com/p/Z9AJUEOhud6)
 Unfortunately, it failed to write a binary search algorithm. I think it is because of the algorithm's complexity, or maybe it is because we do not usually write it, importing already created packages instead.
