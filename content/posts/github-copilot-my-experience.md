@@ -20,10 +20,10 @@ Here is an example of how it can help you to write faster:
 Look how it finished my sentence! I had to make some changes to make it sounds like my accent ;) But in general, it was a good start.
 
 Let's try to write a code somehow related to daily tasks:
-![One more example of GitHub Copilot](/2022/githubcopilot.gif "One more example of GitHub Copilot")
+![One more example of GitHub Copilot](/2022/githubcopilot-faster.gif "One more example of GitHub Copilot")
 
 What about writing code based on comments? 
-![caption](/2022/github-copilot-bubble-sorting-go.gif)
+![caption](/2022/github-copilot-bubble-sorting-go.mp4)
 I've tried to run the function that was written by Copilot, and [it worked](https://play.golang.com/p/Z9AJUEOhud6)
 Unfortunately, it failed to write a binary search algorithm. I think it is because of the algorithm's complexity, or maybe it is because we do not usually write it, importing already created packages instead.
 
@@ -54,7 +54,10 @@ I really liked Tabnine, it has a free plan and what is important, it promised no
 ## Concerns and Conclusion
 Right after finishing writing the article, my subscription will be over. I will not renew it, not because it was a terrible experience, It wasn't, but I have some concerns.
 1. I like what i'm doing, and i really don't want to become just a comment editor. I want to write code, by myself. I don't want to be a code monkey. I am probably not good yet (who is perfect, huh?), but practicing is the only way to improve. 
-2. Legally, all code i wrote from the laptop provided by my employer belongs to the hiring me organization. The rules might be different and vary depending on the company, in some companies, even working on weekends from a personal computer can be considered as writing code for the company. So, using Copilot can be a problem here. Imagine you wrote a fantastic function or piece of code that is pure gold. The copilot can pick it up and show it to someone else. We all do copy-paste from StackOverflow, but it's copied from an open source, not from a private company. So pasting code from the Copilot can lead to legal issues: stealing code, plagiarism, etc and a developer without knowing it can put the company in dire straits. I might be paranoid, but I don't want to risk the reputation of the company i work for and my own career. How could soneone prove that the code was written by Copilot and not stealed from the competitors company's codebase? I don't know, but it is a concern. 
+2. Legally, all code i wrote from the laptop provided by my employer belongs to the hiring me organization. The rules might be different and vary depending on the company, in some companies, even working on weekends from a personal computer can be considered as writing code for the company. So, using Copilot can be a problem here. Imagine you wrote a fantastic function or piece of code that is pure gold. The copilot can pick it up and show it to someone else. We all do copy-paste from StackOverflow, but it's copied from an open source, not from a private company. So pasting code from the Copilot can lead to legal issues: stealing code, plagiarism, etc and a developer without knowing it can put the company in dire straits. I might be paranoid, but I don't want to risk the reputation of the company i work for and my own career. How could soneone prove that the code was written by Copilot and not stealed from the competitors company's codebase? I don't know, but it is a concern.
+By the way, it can be disabled in the [settings](https://github.com/settings/copilot), but it is not a default option.
+
+![Disallow GitHub to use my code snippets for product improvements](/2022/github-copilot-settings.png "Disallow GitHub to use my code snippets for product improvements")
 
 
 
