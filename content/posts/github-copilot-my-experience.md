@@ -6,6 +6,7 @@ tags = ["Copilot","github","autocompleation"]
 keywords = ["github", "coding", "autocompleation", "copilot"]
 description = "What is GitHub Copilot? How can it help, and what are the alternatives?"
 showFullContent = false
+draft = true
 +++
 
 I like to write code, and like many SREs and SWEs, i don't really like to do repetitive things. Copy-pasting sucks, and line-by-line editing is not any penny better. Many tools can help you to write code faster and more efficiently. One of them is GitHub Copilot. In this article, i will try to show how to use it and share my experience.
