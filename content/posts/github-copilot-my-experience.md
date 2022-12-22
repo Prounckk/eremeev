@@ -3,8 +3,8 @@ title = "GitHub Copilot vs Tabnine vs ChatGPT: What is it and how to use it"
 date = "2022-12-22"
 author = "prounckk"
 tags = ["Copilot","github","autocompleation"]
-keywords = ["github", "coding", "autocompleation", "copilot", "chatGPT", "Tabnine"]
-description = "What is GitHub Copilot? How can it help, and what are the alternatives? What is the funcy chatGPT? Can AI take my job?"
+keywords = ["github", "coding", "autocompleation", "copilot", "chatGPT", "Tabnine","AI"]
+description = "What is GitHub Copilot? How can it help and what are the alternatives? What is the fancy chatGPT? Can AI take my job?"
 showFullContent = false
 +++
 
