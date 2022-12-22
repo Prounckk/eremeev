@@ -11,7 +11,7 @@ showFullContent = false
 I like to write code, and like many SREs and SWEs, i don't really like to do repetitive things. Copy-pasting sucks, and line-by-line editing is not any penny better. Many tools can help you to write code faster and more efficiently. Some of them are GitHub Copilot, Tabnine and ChatGPC. In this article, i will try to show how to use AI in the code writing and share my experience.
 
 ## Tools for developers
-There are many alternatives to GitHub Copilot. Here are some of them that i've tried:
+There are some tools i've tried:
 - [GitHub Copilot](https://github.com/features/copilot)
 - [Tabnine](https://www.tabnine.com/)
 - [ChatGPT](https://chat.openai.com/chat)
@@ -29,8 +29,8 @@ Look how it finished my sentence! I had to make some changes to make it sounds l
 
 What about writing code?
 ![](/2022/github-copilot-bubble-sorting-go.gif )
-I've tried to run the function that was written by Copilot, and [it worked](https://play.golang.com/p/Z9AJUEOhud6)
-Unfortunately, it failed to write a binary search algorithm. I think it is because of the algorithm's complexity, or maybe it is because we do not usually write it, importing already created packages instead.
+I've tried to run the function that was written by Copilot, and [it worked](https://play.golang.com/p/Z9AJUEOhud6)  
+Unfortunately, it failed to write a binary search algorithm. I think it is because of the algorithm's complexity or because we do not usually write it, importing already created packages instead.
 
 
 ## What people say about GitHub Copilot
@@ -48,8 +48,8 @@ In fact, developers, with the help of node modules, Composer or Kubernetes, are 
 For the day of publishing the post, the price for an individual contributor is $10 per month or $100 per year.
 
 ## Tabnine
-I really liked Tabnine, it has a free plan and what is important, it promised not to use my code for training the public model; as you can see - I help Tabnine be better ;) I feel it is less annoying and more predictable. I see it as an advanced autocompletion. 
-Same test case of bubble sort Tabnine failed to write from scratch, but held with obvious and repetitive things:
+I really like Tabnine, it has a free plan and what is important, it promises not to use my code for training the public model; as you can see - I help Tabnine be better ;) I feel it is less annoying and more predictable. I see it as an advanced auto-completion.   
+In the same test case of bubble sort, Tabnine failed to write from scratch but held with obvious and repetitive things:
 ![](/2022/tabnine-bubble-sorting-go.gif )
 
 
