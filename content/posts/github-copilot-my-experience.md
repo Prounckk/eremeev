@@ -61,7 +61,7 @@ It's still O(n^2), but looks slightly better than other AIs. Did you notice the 
 
 # Github Copilot vs chatGPT
 Interesting, but Copilot is ChatGPT! Almost!  
-Github Copilot developed in collaboration with OpenAI and powered by OpenAI Codex, which is a direct descendant of GPT-3 that has been trained for programming tasks. The difference between them is that ChatGPT is specifically designed for chatbot applications, while Github Copilot (see OpenAI Codex) is for coders. 
+GitHub Copilot was developed in collaboration with OpenAI and powered by OpenAI Codex, which is a direct descendant of GPT-3 that has been trained for programming tasks. The difference between them is that ChatGPT is designed explicitly for chatbot applications, while Github Copilot (see OpenAI Codex) is for coders. 
 
 ## Concerns
 Right after finishing writing the article, my subscription to Github Copilot will be over. I will not renew it, not because it was a terrible experience, It wasn't. I won't, but I have some concerns.
