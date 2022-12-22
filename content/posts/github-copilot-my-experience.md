@@ -8,8 +8,7 @@ description = "What is GitHub Copilot? How can it help, and what are the alterna
 showFullContent = false
 +++
 
-I like to write code, and like many SREs and SWEs, i don't really like to do repetitive things. Copy-pasting sucks, and line-by-line editing is not any penny better. Many tools can help you to write code faster and more efficiently. Some of them are GitHub Copilot, Tabnine and ChatGPC. In this article, i will try to show how to use AI in the code writing and share my experience.
-
+I like to write code, and like many SREs and SWEs, I don’t want to do repetitive things. Copy-pasting sucks, and line-by-line editing is not any penny better. Many tools can help you to write code faster and more efficiently. Some of them are GitHub Copilot, Tabnine and ChatGPC. In this article, I will try to show how to use AI in code writing and share my experience.  
 ## Tools for developers
 There are some tools i've tried:
 - [GitHub Copilot](https://github.com/features/copilot)
