@@ -48,9 +48,9 @@ Without giving definitive answers, I hope this will provide food for thought.
 
 ### Anonymous N4
 >  Personally, I think all the layoffs have nothing to do with ethics, and if one has an opportunity/invitation for a job opening, one should go for it: 
-1) You are not keeping two full-time jobs simultaneously. 
-2) The job market is so crazy right now there is demand for even more specialists than ones who were laid off (I saw an [article](https://www.cbc.ca/news/business/tech-jobs-layoffs-google-amazon-microsoft-1.6721163) the other day)
-3) It's not guaranteed that you will land the job either - maybe it's even more competitive now... i.e. I don't see why applying for an open position can be un-ethical
+>  1) You are not keeping two full-time jobs simultaneously. 
+>  2) The job market is so crazy right now there is demand for even more specialists than ones who were laid off (I saw an [article](https://www.cbc.ca/news/business/tech-jobs-layoffs-google-amazon-microsoft-1.6721163) the other day)
+>  3) It's not guaranteed that you will land the job either - maybe it's even more competitive now... i.e. I don't see why applying for an open position can be un-ethical
 
 ### Anonymous N5
 >  This is not something I really think about. If there is an open position, it means there is a need to fulfill. If I want this position as much as the person next to me, why would I give it away to him? When I grab the last pint of milk at the grocery store, I don't really think about the next person. If I were to leave it there for the next person, I would need to go to another grocery...  
