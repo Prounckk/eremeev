@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
     <link rel="manifest" href="/site.webmanifest">
-    <title>{{ with .Title }} {{ . }} | {{ end }}{{ .Site.Title }}</title>
-    <meta name="description" content="{{ .Description }}" />
-
-    <!-- uncomment this to add favicon -->
+    {{ partial "seo.html" . }}
     <link rel="icon" type="image/png" href="{{ "favicon.ico" | relURL }}" />
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <!-- Wasm -->
+    <script src="/js/wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("form.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+    </script>
+    <!-- End Wasm -->
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f338afc4230048199c4126ed4ba9213a"}'></script>
     <!-- End Cloudflare Web Analytics -->
