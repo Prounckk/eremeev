@@ -10,13 +10,7 @@
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <!-- Wasm -->
-    <script src="/js/wasm_exec.js"></script>
-    <script>
-        const go = new Go();
-        WebAssembly.instantiateStreaming(fetch("form.wasm"), go.importObject).then((result) => {
-            go.run(result.instance);
-        });
-    </script>
+    {{ partial "wasm.html" . }}
     <!-- End Wasm -->
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f338afc4230048199c4126ed4ba9213a"}'></script>

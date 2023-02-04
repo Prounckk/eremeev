@@ -7,7 +7,7 @@ paginate = 5
 [params]
 titleEmoji = '🧔'
 contentTypeName = "posts"
-colortheme = "light" # dark, light, white, or classic
+colortheme = "dark" # dark, light, white, or classic
 repo = "https://github.com/prounckk/eremeev"
 [params.socialOptions]
 github = "https://github.com/prounckk"
