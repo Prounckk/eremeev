@@ -1,0 +1,13 @@
+<title>{{ with .Title }} {{ . }} | {{ end }}{{ .Site.Title }}</title>
+
+    <meta name="description" content="{{ .Description }}" />
+
+    {{- if isset .Params "canonical" -}}
+    <link rel="canonical" href="{{ .Params.canonical }}" />
+    {{- else -}}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{- end }}
+
+
+    
+    
