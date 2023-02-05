@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>{{ .Title }}</h1>
+                </div>
+            </div>
+        </header>
+    </article>
+    <form id="form-contact">
+        <div>
+            <label for="Email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="CompanyName">Company Name</label>
+            <input type="text" class="form-control" id="companyname" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+            <label for="CompanyNiche">Company Niche</label>
+            <input type="text" class="form-control" id="CompanyNiche" placeholder="Company Niche">
+        </div>
+        <div class="form-group">
+            <label for="Position">Position</label></br>
+            <select id="Position" class="form-control">
+                <option>SRE/DevOps</option>
+                <option>SWE</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Position">Location</label></br>
+            <select class="form-control">
+                <option>Remote</option>
+                <option>Montreal - Hybrid</option>
+                <option>Montreal - In Office</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="SalaryRange">Salary Range</label><br>
+            <input type="text" class="form-control" id="salaryrange" placeholder="Salary Range">
+        </div>
+        <div class="form-group">
+            <label for="Why">Why?</label>
+            <textarea class="form-control" id="why" placeholder="Why do you need me?" rows="3"></textarea>
+
+        </div>
+        <div class="checkbox">
+            <label>
+                <input id="cv-checkbox" type="checkbox"> Yes, i saw your resume
+            </label>
+        </div>
+        <a class="section-button" onclick="submitForm()"> Submit</a>
+        <button type="submit"
+            class='input_submit'
+            style="margin-right: 15px;"
+            onClick="FormSubmit()">Submit
+    </button>
+    </form>
+
+</div>
+
+</main>
+
+{{ end }}

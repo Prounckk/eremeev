@@ -9,7 +9,7 @@
             <div class="bio-social">
                 {{ range $name, $path := $.Param "socialOptions" }}
                 {{ if (and $path (ne $name "email")) }}
-                <a href="{{ $path | safeURL }}" target="_blank" rel="noreferrer" title="{{ $name }}"
+                <a href="{{ $path | safeURL }}" target="_blank" id="{{ $name }}" rel="noreferrer" title="{{ $name }}"
                     aria-label="{{ $name }}">
                     {{ partial (print "svgs/social/" $name ".svg") (dict "width" 25 "height" 25) }}
                 </a>

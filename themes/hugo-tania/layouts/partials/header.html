@@ -11,9 +11,9 @@
                     {{ .Site.Title }}
                     </a>
             </div>
-            <div class="flex">
+            <div id="header-links" class="flex">
                 {{ range .Site.Menus.header }}
-                <a href="{{ .URL | relURL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
+                <a id="{{ .Identifier }}" href="{{ .URL | relURL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}>{{ .Pre }}{{ .Name }}{{ .Post }}</a>
                 {{ end }}
                 <button id="dark-mode-button"></button>
             </div>

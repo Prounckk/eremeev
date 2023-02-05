@@ -4,6 +4,8 @@
 
     {{- if isset .Params "canonical" -}}
     <link rel="canonical" href="{{ .Params.canonical }}" />
+    {{ else if or (eq .Permalink "https://eremeev.ca/posts/" )  }}
+    <link rel="canonical" href="https://eremeev.ca/articles/" />
     {{- else -}}
     <link rel="canonical" href="{{ .Permalink }}" />
     {{- end }}

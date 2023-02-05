@@ -3,6 +3,7 @@ languageCode = "en-ca"
 title = "Sergei Eremeev"
 theme = "hugo-tania"
 paginate = 5
+enableRobotsTXT = true
 
 [params]
 titleEmoji = '🧔'
@@ -30,6 +31,7 @@ weight = -110
 
 # Menu links
 [[menu.header]]
+identifier = "blog"
 name = "Blog"
 weight = 1
 url  = "/articles/"
