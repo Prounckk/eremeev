@@ -1,0 +1,30 @@
+.form-contact {
+    padding-top: 2rem;
+    a.form-submit {
+        font-weight: 500;
+        background: var(--light-background);
+        color: var(--dark-font-color);
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        border-radius: 0.3rem;
+        border-width: 0 !important;
+        white-space: nowrap;
+        line-height: 1;
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+    
+        &:hover {
+            background: var(--light-background-hover);
+            color: var(--heading-color);
+        }
+    }
+    button.form-submit {
+        margin-right: 15px;
+        color: var(--dark-font-color);
+
+        &:hover {
+            background: var(--light-background-hover);
+            color: var(--heading-color);
+        }
+    }
+}

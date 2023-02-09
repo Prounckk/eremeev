@@ -1,7 +1,8 @@
 package dom
 
 import (
-    "syscall/js"
+	"fmt"
+	"syscall/js"
 )
 
 var document js.Value
@@ -22,7 +23,7 @@ func getElementById(elem string) js.Value {
 }
 
 func getElementValue(elem string, value string) js.Value {
-    element := getElementById(elem).Get(value)
+    element := getElementById(elem)
     if element.IsNull() {
         return js.Null()
     }
@@ -41,11 +42,16 @@ func AddEventListener(elem string, event string, fn func()) {
     getElementById(elem).Call("addEventListener", event, js.FuncOf(wrapGoFunction(fn)))
 }
 
-func GetString(elem string, value string) string {
+func GetStringFromElement(elem string) string {
+    return GetStringFromElementByValue(elem, "value")
+}
+
+func GetStringFromElementByValue(elem string, value string) string {
     element := getElementValue(elem, value)
     if !element.IsNull() {
         return element.String()
     }
+    fmt.Println("got empty "+ value + " for element: " + elem)
     return ""
 }
 

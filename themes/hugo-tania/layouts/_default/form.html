@@ -10,30 +10,36 @@
             </div>
         </header>
     </article>
-    <form id="form-contact">
+      <!-- <form id="form-contact" class="form-contact" action="https://eremeev.ca/contact-form" method="POST"> -->
+        <form id="formcontact" class="form-contact">
+
+        <div>
+            <label for="Email">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="How can i call you?">
+        </div>
         <div>
             <label for="Email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" class="form-control" id="email" placeholder="Please, add your email">
         </div>
         <div class="form-group">
             <label for="CompanyName">Company Name</label>
-            <input type="text" class="form-control" id="companyname" placeholder="Company Name">
+            <input type="text" class="form-control" id="company" placeholder="Company Name">
         </div>
         <div class="form-group">
             <label for="CompanyNiche">Company Niche</label>
-            <input type="text" class="form-control" id="CompanyNiche" placeholder="Company Niche">
+            <input type="text" class="form-control" id="companyniche" placeholder="Company Niche">
         </div>
         <div class="form-group">
             <label for="Position">Position</label></br>
-            <select id="Position" class="form-control">
+            <select id="position" class="form-control">
                 <option>SRE/DevOps</option>
                 <option>SWE</option>
                 <option>Other</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="Position">Location</label></br>
-            <select class="form-control">
+            <label for="Location">Location</label></br>
+            <select id="location" class="form-control">
                 <option>Remote</option>
                 <option>Montreal - Hybrid</option>
                 <option>Montreal - In Office</option>
@@ -41,23 +47,28 @@
         </div>
         <div class="form-group">
             <label for="SalaryRange">Salary Range</label><br>
-            <input type="text" class="form-control" id="salaryrange" placeholder="Salary Range">
+            <select id="salary" class="form-control">
+                <option>0 - 100</option>
+                <option>101 - 130</option>
+                <option>131 - 160</option>
+                <option>161 - 190</option>
+                <option>190 + </option>
+            </select>
         </div>
         <div class="form-group">
             <label for="Why">Why?</label>
-            <textarea class="form-control" id="why" placeholder="Why do you need me?" rows="3"></textarea>
+            <textarea class="form-control" id="message" placeholder="Why do you need me?" rows="3"></textarea>
 
         </div>
         <div class="checkbox">
             <label>
-                <input id="cv-checkbox" type="checkbox"> Yes, i saw your resume
+                <input id="cv-checkbox" type="checkbox"> Yes, i saw your <a href="/resume/">resume</a>
             </label>
         </div>
-        <a class="section-button" onclick="submitForm()"> Submit</a>
+        <a class="form-submit" onclick="SubmitForm()"> Submit</a>
         <button type="submit"
-            class='input_submit'
-            style="margin-right: 15px;"
-            onClick="FormSubmit()">Submit
+            class='form-submit'
+            onsubmit="SubmitForm()">Submit
     </button>
     </form>
 
