@@ -5,13 +5,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"sync"
 	"syscall/js"
 
 	"github.com/prounckk/eremeev/code-examples/wasm/dom"
 )
 
-const SENDGRID_API_KEY = "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"
+var SENDGRID_API_KEY = os.Getenv("SENDGRID_API_KEY")
 
 var wg sync.WaitGroup // 1
 
