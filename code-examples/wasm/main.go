@@ -5,14 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"os"
 	"sync"
 	"syscall/js"
 
 	"github.com/prounckk/eremeev/code-examples/wasm/dom"
 )
 
-var SENDGRID_API_KEY = os.Getenv("SENDGRID_API_KEY")
+var SENDGRID_API_KEY string
 
 var wg sync.WaitGroup // 1
 
@@ -69,6 +68,7 @@ func (form Form) sendEmail() {
 					"message":  form.message,
 					"subject":  form.location + " | " + form.position,
 					"company":  form.company,
+					"niche":    form.companyniche,
 					"position": form.position,
 					"salary":   form.salary,
 					"location": form.location,
@@ -89,6 +89,9 @@ func (form Form) sendEmail() {
 	}
 	req.Header.Set("Authorization", "Bearer "+SENDGRID_API_KEY)
 	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("User-Agent", "sendgrid/3.12.0;go")
+	req.Header.Set("Accept", "application/json")
+
 	client := &http.Client{}
 	defer wg.Done()
 	res, err := client.Do(req)
@@ -97,6 +100,5 @@ func (form Form) sendEmail() {
 		return
 	}
 	defer res.Body.Close()
-	fmt.Println(res.Status)
 	return
 }
