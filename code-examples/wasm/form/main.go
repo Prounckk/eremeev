@@ -27,7 +27,7 @@ type Form struct {
 }
 
 func main() {
-	fmt.Println("Go Web Assembly")
+	fmt.Println("Go WebAssembly - Form submission")
 	wg.Add(1)
 	js.Global().Set("SubmitForm", js.FuncOf(SubmitForm))
 	wg.Wait()
@@ -45,24 +45,27 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	form.Salary = dom.GetStringFromElement("salary")
 
 	go form.sendEmail()
+	
 	return nil
 }
 
-func (form Form) sendEmail() {
+func (form *Form) sendEmail() {
+
 	body, err := json.Marshal(form)
 	if err != nil {
+		return
 		fmt.Println(err)
 	}
 	req, err := http.NewRequest("POST", "https://eremeev.ca/contact-form", bytes.NewBuffer(body))
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	req.Header.Set("Authorization", "Bearer "+CF_API_KEY)
 	req.Header.Set("Content-Type", "application/json")
 	client := &http.Client{}
 	defer wg.Done()
 	res, err := client.Do(req)
-
 	if err != nil {
 		fmt.Println(err)
 		return
