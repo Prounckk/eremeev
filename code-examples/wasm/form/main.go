@@ -50,7 +50,7 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	form.sendEmail()
 	if form.Error != "" {
 		fmt.Println(form.Error)
-		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + form.Error + "<br>Please, try again later."
+		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + form.Error + "<br><a class=\"section-button\" href=\"/contact-me/\">Back to the form</a>"
 	}
 
 	dom.Hide("formcontact")
@@ -61,7 +61,7 @@ func SubmitForm(this js.Value, args []js.Value) any {
 }
 
 func (form *Form) sendEmail() {
-
+	defer wg.Done()
 	if form.Email == "" {
 		form.Error = "Email is required, sorry."
 		return
@@ -79,12 +79,12 @@ func (form *Form) sendEmail() {
 	req.Header.Set("Authorization", "Bearer "+CF_API_KEY)
 	req.Header.Set("Content-Type", "application/json")
 	client := &http.Client{}
-	defer wg.Done()
 	res, err := client.Do(req)
 	if err != nil {
 		form.Error = err.Error()
 		return
 	}
+	fmt.Println(res.Status)
 	defer res.Body.Close()
 	return
 }
