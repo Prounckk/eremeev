@@ -214,7 +214,7 @@ PROS:
 - It is a Server-side, ahead-of-time compiling application, so it should use fewer resources to start and run.
 
 # Conclusion
-Will I use WASM in the future - definitely yes! Do I know how? Not yet, but I feel it has potential and, with good support from the community, can reach a bright future!   
+Will I use WASM in the future - definitely, yes! Do I know how? Not yet, but I feel it has potential and, with good support from the community, can reach a bright future!   
 
 # Links to documentation and other resources
 - [WebAssembly official website](https://webassembly.org)
