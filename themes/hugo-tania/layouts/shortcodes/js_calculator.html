@@ -1,0 +1,52 @@
+<div class="calculate">
+    <input type="number" id="calculate" placeholder="Start with 10" required></input><br>
+    <button type="button" onclick="calculate()">JavaScript</button>
+    <button type="button" onclick="calculateWasm()">WASM by Golang</button>
+    <script type="text/javascript">
+
+
+
+
+        function veryBadForLoops(n) {
+            res = 0;
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    res = res + j + i
+                }
+            }
+            return res;
+        }
+        async function calculate() {
+            let start = performance.now();
+            let input = parseInt(document.getElementById("calculate").value),
+                result = await veryBadForLoops(input);
+            let end = performance.now();
+            let execution_time = end - start;
+            
+            document.getElementById("total_hours").innerHTML = result;
+            document.getElementById("execution_time").innerHTML = execution_time;
+
+        }
+
+    </script>
+    
+        <div class="row-head" >
+            <div class="table-cell-25"> </div>
+            <div class="table-cell" >JavaScript</div>
+            <div class="table-cell" >Golang/WASM</div>
+        </div>
+        <div class="row-body">
+            <div class="table-cell-25">Calculated value</div>
+            <div class="table-cell"><p id="total_hours">0</p></div>
+            <div class="table-cell"><p id="total_hours_go">0</p></div>
+        </div>
+        <div class="row-body">
+            <div class="table-cell-25">Execution time in ms</div>
+            <div class="table-cell">
+                <p id="execution_time">0</p>
+            </div>
+            <div class="table-cell">
+                <p id="execution_time_go">0</p>
+            </div>
+        </div>
+    </div>

@@ -1,30 +1,39 @@
 .form-contact {
     padding-top: 2rem;
-    a.form-submit {
+
+    button.form-submit {
         font-weight: 500;
+        width: 100%;
         background: var(--light-background);
         color: var(--dark-font-color);
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
+        padding: 0.8rem 0.6rem;
+        font-size: 0.9rem;
         border-radius: 0.3rem;
         border-width: 0 !important;
         white-space: nowrap;
         line-height: 1;
-        margin-left: 2rem;
-        margin-top: 0.5rem;
-    
-        &:hover {
-            background: var(--light-background-hover);
-            color: var(--heading-color);
-        }
-    }
-    button.form-submit {
-        margin-right: 15px;
-        color: var(--dark-font-color);
 
         &:hover {
             background: var(--light-background-hover);
             color: var(--heading-color);
         }
+
+    }
+
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=text]:focus {
+        background: var(--light-background-hover);
+        color: var(--heading-color);
     }
 }

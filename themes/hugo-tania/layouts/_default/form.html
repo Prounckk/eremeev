@@ -10,14 +10,17 @@
             </div>
         </header>
     </article>
-        <form id="formcontact" class="form-contact">
+    <div class="article-post">
+        {{ .Content }}
+    </div>
+    <form id="formcontact" class="form-contact">
         <div>
             <label for="Email">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="How can i call you?">
+            <input type="text" class="form-control" id="name" placeholder="How can i call you?" required>
         </div>
         <div>
             <label for="Email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Please, add your email">
+            <input type="email" class="form-control" id="email" placeholder="Please, add your email" required>
         </div>
         <div class="form-group">
             <label for="CompanyName">Company Name</label>
@@ -41,6 +44,7 @@
                 <option>Remote</option>
                 <option>Montreal - Hybrid</option>
                 <option>Montreal - In Office</option>
+                <option>Other</option>
             </select>
         </div>
         <div class="form-group">
@@ -60,10 +64,11 @@
         </div>
         <div class="checkbox">
             <label>
-                <input id="cv-checkbox" type="checkbox"> Yes, i saw your <a href="/resume/">resume</a>
+                <input id="cv-checkbox" type="checkbox" required> Yes, i saw your <a href="/resume/">resume</a>
             </label>
         </div>
-        <a class="form-submit" onclick="SubmitForm()"> Submit</a>
+        <button type="submit" class='form-submit' onsubmit="SubmitForm()">Submit
+        </button>
     </form>
 
 </div>

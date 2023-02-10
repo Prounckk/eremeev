@@ -4,7 +4,11 @@ import (
 	"fmt"
 	"syscall/js"
 )
-
+// ----------------------------------------------------------------
+// This code is copied from the article:
+// https://ian-says.com/articles/golang-in-the-browser-with-web-assembly/
+// with some modifications by me (@prounckk)
+// ----------------------------------------------------------------
 var document js.Value
 
 func init() {
