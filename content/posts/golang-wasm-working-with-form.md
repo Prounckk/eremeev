@@ -1,10 +1,10 @@
 +++
 title = "Golang WebAssembly: Compile Go to Wasm from scratch with examples"
-date = "2023-02-11"
+date = "2023-02-10"
 author = "prounckk"
 tags = ["wasm", "go"]
-keywords = ["wasm", "golang","go", "WebAssambly"]
-description = "Golang WebAssembly: Compile Go to Wasm from scratch with examples"
+keywords = ["wasm", "golang", "go", "WebAssambly"]
+description = "WebAssambly was on my wishlist of things to try for a long time. All my pre-wasm code in this article is written in Go, but the concept is similar for other languages"
 showFullContent = false
 +++
 
@@ -12,7 +12,7 @@ showFullContent = false
 WebAssambly was on my wishlist of things to try for a long time. My original idea was to write Rust code compiled to WASM, and the blog was created for this purpose. But times fly fast; my knowledge of Rust stayed on the same level while Golang progressed for a long mile.   
 
 Before I jump into implementation, I want to say that all my pre-wasm code is written in Go, but you can use what you want; I could find compilers for Rust, PHP, C++, etc. 
-In this article will be a lot of Go-WASM-related comments, so please check [my cat's Instagram](https://www.instagram.com/cat_watson_mtl/) if golang is not your area of interest. 
+In this article will be a lot of Go-WASM-related comments, so please check [my cat's Instagram](https://www.instagram.com/cat_watson_mtl/) if Golang is not your area of interest. 
 
 # How to start with WASM
 ## Create a golang file
@@ -57,7 +57,7 @@ Now we have generated WASM binary file, but how to load it from the page? Sorry,
 </script>
 ```  
 ... and we got an error:  `Uncaught ReferenceError: Go is not defined`  
-It looks like a browser needs a guide on how to use Go on Javascript Wasm execution architecture. Happily, it shipped with Go. Please don't move it, but copy it!
+It looks like a browser needs a guide on how to execute the compiled into WebAssembly golang application. Happily, it shipped with Go. Please don’t move it, but copy it!
 ```bash
 cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" $PWD      
 ```
@@ -200,21 +200,21 @@ Don't worry; the API Key is already deactivated.
 
 # Pros and Cons
 
-Important note: this is my first experience with WASM. Probably some of the points here are just my misunderstanding of the concept.
-CONS:
+Important note: this is my first experience with WASM. Probably some of the points here are just my misunderstanding of the concept.  
+## CONS:
  - WASM still relies on JavaScript API to communicate with [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document)
  - `syscall/js` - is still in development, documentation is missing examples, and the package's functionality is still limited.
  - My hope to deploy secrets secured way to the front end was broken. The keys are unavailable from the console but stored in the file's header. I think it should be a way to solve it!
 - WASM files are heavy! See the screenshot. But again, I think it should be a way to solve it!
 ![](/2023/wasm-file-size.png )
-- Writing golang code with js.Value is contreintuitive. There are so many [conversions between types](https://pkg.go.dev/syscall/js#ValueOf), and error handling is less intuitive than with pure golang.
-PROS:
+- Writing golang code with js.Value is contreintuitive. There are so many [conversions between types](https://pkg.go.dev/syscall/js#ValueOf), and error handling is less intuitive than with pure golang.  
+## PROS:
 - Write FrontEnd code with the language you are more comfortable with.
 - In theory, everything can be compiled and used as FrontEnd applications, even complicated games.
 - It is a Server-side, ahead-of-time compiling application, so it should use fewer resources to start and run.
 
 # Conclusion
-Will I use WASM in the future - definitely, yes! Do I know how? Not yet, but I feel it has potential and, with good support from the community, can reach a bright future!   
+My first experience with WASM was successful, but I faced some issues I could not have expected initially. WebAssamby is fast and secure; it gives the freedom of choosing a programming language but still relies on JavaScript. It's not the end of the world until JS is disabled in the browser for some reason. Will I use WASM in the future - definitely, yes! Do I know how? Not yet, but I feel it has potential and, with good support from the community, can reach a bright future!   
 
 # Links to documentation and other resources
 - [WebAssembly official website](https://webassembly.org)

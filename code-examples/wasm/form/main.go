@@ -24,6 +24,8 @@ type Form struct {
 	Position     string `json:"position"`
 	Location     string `json:"location"`
 	Salary       string `json:"salary"`
+	Error        string `json:"error"`
+	Thanks       string `json:"thanks"`
 }
 
 func main() {
@@ -43,22 +45,37 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	form.Position = dom.GetStringFromElement("position")
 	form.Location = dom.GetStringFromElement("location")
 	form.Salary = dom.GetStringFromElement("salary")
+	form.Thanks = "Thank you for your message!<br>Click <a href=\"/articles/\">here</a> to check my latest posts"
 
-	go form.sendEmail()
-	
+	form.sendEmail()
+	if form.Error != "" {
+		fmt.Println(form.Error)
+		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + form.Error
+	}
+
+	dom.Hide("formcontact")
+	dom.Show("after-form")
+	dom.SetValue("after-form", "innerHTML", form.Thanks)
+
 	return nil
 }
 
 func (form *Form) sendEmail() {
 
+	if form.Email == "" {
+		form.Error = "Email is required, sorry."
+		return
+	}
 	body, err := json.Marshal(form)
 	if err != nil {
+		form.Error = err.Error()
 		return
-		fmt.Println(err)
 	}
+	form.Error = form.Message
+	return
 	req, err := http.NewRequest("POST", "https://eremeev.ca/contact-form", bytes.NewBuffer(body))
 	if err != nil {
-		fmt.Println(err)
+		form.Error = err.Error()
 		return
 	}
 	req.Header.Set("Authorization", "Bearer "+CF_API_KEY)
@@ -67,7 +84,7 @@ func (form *Form) sendEmail() {
 	defer wg.Done()
 	res, err := client.Do(req)
 	if err != nil {
-		fmt.Println(err)
+		form.Error = err.Error()
 		return
 	}
 	defer res.Body.Close()

@@ -13,7 +13,7 @@
     <div class="article-post">
         {{ .Content }}
     </div>
-    <form id="formcontact" class="form-contact" onsubmit="SubmitForm()">
+    <form id="formcontact" class="form-contact">
         <div>
             <label for="Email">Name</label>
             <input type="text" class="form-control" id="name" placeholder="How can i call you?" required>
@@ -67,9 +67,15 @@
                 <input id="cv-checkbox" type="checkbox" required> Yes, i saw your <a href="/resume/">resume</a>
             </label>
         </div>
-        <button type="submit" class="form-submit">Submit
-        </button>
+        <a class="form-submit" onclick="SubmitForm()">Submit</a>
     </form>
+
+
+    <div id="after-form" hidden>
+        <h1>TY</h1>
+    </div>
+
+
 
 </div>
 
