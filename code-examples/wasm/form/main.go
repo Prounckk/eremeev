@@ -50,7 +50,7 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	form.sendEmail()
 	if form.Error != "" {
 		fmt.Println(form.Error)
-		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + form.Error
+		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + form.Error + "<br>Please, try again later."
 	}
 
 	dom.Hide("formcontact")
@@ -71,8 +71,6 @@ func (form *Form) sendEmail() {
 		form.Error = err.Error()
 		return
 	}
-	form.Error = form.Message
-	return
 	req, err := http.NewRequest("POST", "https://eremeev.ca/contact-form", bytes.NewBuffer(body))
 	if err != nil {
 		form.Error = err.Error()
