@@ -3,17 +3,13 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"net/http"
-	"sync"
 	"syscall/js"
 
 	"github.com/prounckk/eremeev/code-examples/wasm/dom"
 )
 
 var CF_API_KEY string
-
-var wg sync.WaitGroup
 
 type Form struct {
 	Email        string `json:"email"`
@@ -29,10 +25,9 @@ type Form struct {
 }
 
 func main() {
-	fmt.Println("Go WebAssembly - Form submission")
-	wg.Add(1)
+	println("Go WebAssembly - Form submission")
 	js.Global().Set("SubmitForm", js.FuncOf(SubmitForm))
-	wg.Wait()
+	<-make(chan bool)
 }
 
 func SubmitForm(this js.Value, args []js.Value) any {
@@ -45,12 +40,14 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	form.Position = dom.GetStringFromElement("position")
 	form.Location = dom.GetStringFromElement("location")
 	form.Salary = dom.GetStringFromElement("salary")
-	form.Thanks = "Thank you for your message!<br>Click <a href=\"/articles/\">here</a> to check my latest posts"
-
-	form.sendEmail()
-	if form.Error != "" {
-		fmt.Println(form.Error)
-		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + form.Error + "<br><a class=\"section-button\" href=\"/contact-me/\">Back to the form</a>"
+	form.Thanks = "Thank you for your message!<br><a href=\"/articles/\">Click here to check my latest posts</a>"
+	
+	ch := make(chan Form)
+	go form.sendEmail(ch)
+	error := <-ch
+	if error.Error != "" {
+		println(error.Error)
+		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + error.Error + "<br><a class=\"section-button\" href=\"/contact-me/\">Back to the form</a>"
 	}
 
 	dom.Hide("formcontact")
@@ -60,31 +57,40 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	return nil
 }
 
-func (form *Form) sendEmail() {
-	defer wg.Done()
+func (form *Form) sendEmail(ch chan Form) {
 	if form.Email == "" {
 		form.Error = "Email is required, sorry."
+		ch <- *form
 		return
 	}
 	body, err := json.Marshal(form)
 	if err != nil {
 		form.Error = err.Error()
+		ch <- *form
 		return
 	}
+
 	req, err := http.NewRequest("POST", "https://eremeev.ca/contact-form", bytes.NewBuffer(body))
 	if err != nil {
 		form.Error = err.Error()
+		ch <- *form
 		return
 	}
 	req.Header.Set("Authorization", "Bearer "+CF_API_KEY)
 	req.Header.Set("Content-Type", "application/json")
 	client := &http.Client{}
-	res, err := client.Do(req)
-	if err != nil {
-		form.Error = err.Error()
-		return
-	}
-	fmt.Println(res.Status)
-	defer res.Body.Close()
+
+	go func() {
+		res, err := client.Do(req)
+		if err != nil {
+			form.Error = err.Error()
+			ch <- *form
+			return
+		}
+		defer res.Body.Close()
+
+	}()
+
+	ch <- *form
 	return
 }

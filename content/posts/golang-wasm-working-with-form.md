@@ -132,54 +132,84 @@ var wg sync.WaitGroup
 
 func main() {
 	fmt.Println("Go Web Assembly")
-	wg.Add(1)
 	js.Global().Set("SubmitForm", js.FuncOf(SubmitForm))
-	wg.Wait()
+	<-make(chan bool)
 }
 func SubmitForm(this js.Value, args []js.Value) interface{} {
 	form := Form{}
 	form.Name = dom.GetStringFromElement("name")
 	form.Email = dom.GetStringFromElement("email")
 	form.Company = dom.GetStringFromElement("company")
-	go form.sendEmail()
+	form.Thanks = "Thank you for your message!<br><a href=\"/articles/\">Click here to check my latest posts</a>"
+	
+	ch := make(chan Form)
+	go form.sendEmail(ch)
+	error := <-ch
+	if error.Error != "" {
+		println(error.Error)
+		form.Thanks = "Oops! It looks like my wasm code failed: <br>" + error.Error + "<br><a class=\"section-button\" href=\"/contact-me/\">Back to the form</a>"
+	}
+
+	dom.Hide("formcontact")
+	dom.Show("after-form")
+	dom.SetValue("after-form", "innerHTML", form.Thanks)
 	return nil
 }
 
-func (form Form) sendEmail() {
-	body, err := json.Marshal(form)
-	if err != nil {
-		fmt.Println(err)
+func (form *Form) sendEmail(ch chan Form) {
+	if form.Email == "" {
+		form.Error = "Email is required, sorry."
+		ch <- *form
 		return
 	}
+	body, err := json.Marshal(form)
+	if err != nil {
+		form.Error = err.Error()
+		ch <- *form
+		return
+	}
+
 	req, err := http.NewRequest("POST", "https://eremeev.ca/contact-form", bytes.NewBuffer(body))
 	if err != nil {
-		fmt.Println(err)
+		form.Error = err.Error()
+		ch <- *form
 		return
 	}
 	req.Header.Set("Authorization", "Bearer "+CF_API_KEY)
 	req.Header.Set("Content-Type", "application/json")
 	client := &http.Client{}
-	defer wg.Done()
-	res, err := client.Do(req)
 
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	defer res.Body.Close()
+	go func() {
+		res, err := client.Do(req)
+		if err != nil {
+			form.Error = err.Error()
+			ch <- *form
+			return
+		}
+		defer res.Body.Close()
+
+	}()
+
+	ch <- *form
 	return
 }
 ...
 {{< / highlight >}}
 
 This code is slightly different from the previous version. 
-I've implemented WaitGroup here with the same idea of not exiting while working.
 - `js.Global().Set("SubmitForm", js.FuncOf(SubmitForm))` - this is also something new. We expose the function SubmitForm to JavaScript with the same name, and it can be called as any other JavaScript function, like:
 ```html
  <button type="submit" class='form-submit' onsubmit="SubmitForm()">Submit</button>
 ```
-You definitely noticed I do not return errors but print them. This was done to make debugging easier, but it's not a good practice. Please, don't be Sergei. 
+You definitely noticed I do not return errors but print them to visitors. This was done to make debugging easier, but it's not a good practice. Please, don't be Sergei. 
+In an ideal world, I should have an agent or script to catch the errors and send them to my monitoring system.  
+You might notice I'm using channels here and my `request.Do` is wrapped in a go routine. 
+Before that, I've so many `fatal error: all goroutines are asleep - deadlock!` and this is again a specific of using WebAssambly for Go.  
+Good idea to read [documentation](https://pkg.go.dev/syscall/js#FuncOf) sometimes! 
+> Invoking the wrapped Go function from JavaScript will pause the event loop and spawn a new goroutine. Other wrapped functions which are triggered during a call from Go to JavaScript get executed on the same goroutine.  
+As a consequence, if one wrapped function blocks, JavaScript's event loop is blocked until that function returns. Hence, calling any async JavaScript API, which requires the event loop, like fetch (http.Client), will cause an immediate deadlock. Therefore a blocking function should explicitly start a new goroutine.
 
+# Security
 Fun fact! `CF_API_KEY` is undefined in the console, which is great for security reasons. But unfortunately, it's not a working solution for public repositories like this one. 
 Please, don't be shy to check the git history to see that initially, I was trying to send email from WASM but had to move email sending logic to the backend, which is Cloudflare Worker in my case.
 Why? Because my SendGrid Account was blocked two times! First time I committed code with the API Key. Shame on me. But the second time, the code was added to the binary file during the build. What could go wrong? Well, the WASM file still contains the build parameters in the header. So in a minute from my git push command, I've got a second account suspension. Kudos to SendGrid for tracking leaked API keys on Github!
