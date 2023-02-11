@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"net/http"
+	"regexp"
 	"syscall/js"
 
 	"github.com/prounckk/eremeev/code-examples/wasm/dom"
@@ -57,9 +58,14 @@ func SubmitForm(this js.Value, args []js.Value) any {
 	return nil
 }
 
+func isEmailValid(e string) bool {
+    emailRegex := regexp.MustCompile(`^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$`)
+    return emailRegex.MatchString(e)
+}
+
 func (form *Form) sendEmail(ch chan Form) {
-	if form.Email == "" {
-		form.Error = "Email is required, sorry."
+	if !isEmailValid(form.Email) {
+		form.Error = "A valid email is required, sorry."
 		ch <- *form
 		return
 	}
