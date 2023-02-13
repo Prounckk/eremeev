@@ -120,10 +120,10 @@ Let'see why!
  - WASM was designed to be fast.
 
 
-At the same time, WebAssembly is not a JavaScript replacement. It is designed to operate hand in hand with JavaScript to take care of performance-critical components of a web application. As you can see, browsers still need JS to load wasm properly.
+At the same time, WebAssembly is not a JavaScript replacement. It's designed to operate hand in hand with JavaScript to take care of performance-critical components of a web application. As you can see, browsers still need JS to load wasm properly.
 
 # Form submission
-My second experiment was with a form. I know there is nothing simpler than `<form action="/foo/bar" method="post">`, but what if the recipient needs credentials? Ah? Here it begins a little bit complicated. 
+My second experiment was with a [contact-me](/contact-me/) form. I know there is nothing simpler than `<form action="/foo/bar" method="post">`, but what if the recipient needs credentials? Ah? Here it begins a little bit complicated. 
 
 
 {{< highlight go "linenos=table,hl_lines=8 10-12,linenostart=199" >}}
@@ -196,8 +196,8 @@ func (form *Form) sendEmail(ch chan Form) {
 ...
 {{< / highlight >}}
 
-This code is slightly different from the previous version. 
-- `js.Global().Set("SubmitForm", js.FuncOf(SubmitForm))` - this is also something new. We expose the function SubmitForm to JavaScript with the same name, and it can be called as any other JavaScript function, like:
+This code is slightly different from the previous version.  
+- `js.Global().Set("SubmitForm", js.FuncOf(SubmitForm))` - this is something new. We expose the function SubmitForm to JavaScript with the same name, and it can be called as any other JavaScript function, like:
 ```html
  <button type="submit" class='form-submit' onsubmit="SubmitForm()">Submit</button>
 ```
