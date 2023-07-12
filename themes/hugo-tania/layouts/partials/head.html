@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="{{ "favicon.ico" | relURL }}" />
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <script src="https://cdn.talksoon.com/scripts/tsw_loader.min.js" defer></script>
     <!-- Wasm -->
     {{ partial "wasm.html" . }}
     <!-- End Wasm -->
