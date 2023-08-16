@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-date: "2022-11-01T13:21:55-05:00"
+date: "2023-04-16T13:21:55-05:00"
 draft: false
 description: "Resume of Sergei Eremeev, an SRE and Golang Developer from North America, Canada, Montreal - UTC-5"
 
@@ -16,7 +16,7 @@ I’m the nerd that still in Slack until midnight and creates PRs on weekends ju
 ## Summary
 
 * Over 5+ years of experience in Golang and PHP. Excellent debugging and problem-solving skills.
-* Good experience with Docker. Extensive knowledge in using Git
+* Good experience with Docker. Extensive knowledge using Git
 * Hands-On experience with Google Cloud[^1] and AWS, Digital Ocean and Data Packet (ex-10gbps.io)
 * I implemented REST-API and CLI services by Golang with microservices architecture.
 * Working with LinkedIn, SalesForce, Hubspot and other APIs  
