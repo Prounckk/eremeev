@@ -20,6 +20,9 @@
             <div class="JWyTcc">Call</div>
         </a>
     </div>
+    <div>
+        <a href="tel:18559504006" >CALL ME</a>
+    </div>
 
 
 
@@ -34,7 +37,8 @@
             event.preventDefault();
             var phoneNumber = this.getAttribute('data-phone-number');
             // Logic to initiate the call using the tel protocol
-            window.document = 'tel:' + phoneNumber;
+            // window.document = 'tel:' + phoneNumber;
+            window.document.location = 'tel:+232323';
         });
     });
 </script>
