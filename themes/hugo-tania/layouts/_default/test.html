@@ -13,7 +13,7 @@
         {{ .Content }}
     </div>
     <div>
-        <a href="tel:15145759454" target="_parent" data-phone-number="+15145759454" role="button" aria-label="Call" id="callButton">
+        <a href="tel://15145759454" target="_parent" data-phone-number="+15145759454" role="button" aria-label="Call" id="callButton">
         <span class="S9460" aria-hidden="true">
             <!-- SVG and other elements -->
         </span>
@@ -34,7 +34,7 @@
     </div>
 
     <div>
-    <a href="tel:1-234-867-5309" target="_parent" class="btn btn-success font-weight-light callus-btn py-2" title="Call us today!"><span class="text-uppercase">Call Us</span> <br>sdsdsdsd</a>
+    <a href="tel://1-234-867-5309"  class="btn btn-success font-weight-light callus-btn py-2" title="Call us today!"><span class="text-uppercase">Call Us</span> <br>sdsdsdsd</a>
     </div>
 
 
@@ -55,8 +55,7 @@
         });
     });
     function callmynow() {
-        window.location.href = "tel:+15145759454";
-        return false;
+        window.open( 'tel:800-888-1234', '_top' );
     }
 
     function replacePhone() {
