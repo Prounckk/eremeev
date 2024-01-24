@@ -1,20 +1,4 @@
 {{ define "main" }}
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var callButton = document.getElementById('callButton');
-
-        callButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            var phoneNumber = this.getAttribute('data-phone-number');
-            var userResponse = confirm('Do you want to call ' + phoneNumber + '?');
-
-            if (userResponse) {
-                // Logic to "initiate" the call using the tel protocol
-                window.location.href = 'tel:' + phoneNumber;
-            }
-        });
-    });
-</script>
 <div class="container">
     <article>
         <header class="article-header">
@@ -42,7 +26,18 @@
 
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var callButton = document.getElementById('callButton');
 
+        callButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            var phoneNumber = this.getAttribute('data-phone-number');
+            // Logic to initiate the call using the tel protocol
+            window.document = 'tel:' + phoneNumber;
+        });
+    });
+</script>
 
 </main>
 
