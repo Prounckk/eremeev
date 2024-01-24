@@ -22,7 +22,13 @@
     </div>
     <div>
         <input type="submit" value="Send" onclick="return callmynow()">
+        <input type="submit" value="Replace" onclick="return replacePhone()">
 
+    </div>
+    <div>
+        <p>What is the name(s) of your browser?</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
     </div>
 
 
@@ -43,8 +49,31 @@
         });
     });
     function callmynow() {
-        window.location.href = "tel:+232323";
+        window.location.href = "tel:+15145759454";
         return false;
+    }
+
+    function replacePhone() {
+        location.replace("tel:+15145759454")
+    }
+
+    function myFunction() {
+        if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+            alert('Opera');
+        } else if (navigator.userAgent.indexOf("Edg") != -1) {
+            alert('Edge');
+        } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+            alert('Chrome');
+        } else if (navigator.userAgent.indexOf("Safari") != -1) {
+            alert('Safari');
+        } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+            alert('Firefox');
+        } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+        {
+            alert('IE');
+        } else {
+            alert(navigator.userAgent);
+        }
     }
 </script>
 
