@@ -14,7 +14,7 @@
     </div>
 
     <div>
-        <br><a class="font-13 color-theme" onclick="window.open('tel:+15145759454');">Call</a>
+        <br><a class="font-13 color-theme" onclick=callme()>Call</a>
         <br><a class="font-13 color-theme" onclick="window.open('sms:+15145759454;?&body=hello.');">text</a>
 
     </div>
@@ -49,9 +49,40 @@
         location.replace("tel:+15145759454")
     }
 
-    function myFunction() {
+function callme() {
+        if (isGSA()) {
+            window.open("tel:+15145759454");
+        } else {
+            window.location.href = "tel:+15145759454";
+        }
 
-            alert(navigator.userAgent);
+}
+
+    function isGSA() {
+        if (navigator.userAgent.indexOf("GSA") != -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+        function myFunction() {
+            if ((navigator.userAgent.indexOf("GSA") || navigator.userAgent.indexOf('OPR')) != -1) {
+                alert('Opera');
+            } else if (navigator.userAgent.indexOf("GSA") != -1) {
+                alert('Edge');
+            } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+                alert('Chrome');
+            } else if (navigator.userAgent.indexOf("Safari") != -1) {
+                alert('Safari');
+            } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+                alert('Firefox');
+            } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+            {
+                alert('IE');
+            } else {
+                alert('unknown');
+            }
+
 
     }
 </script>
