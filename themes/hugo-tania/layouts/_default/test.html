@@ -21,7 +21,8 @@
         </a>
     </div>
     <div>
-        <a href="tel:18559504006" >CALL ME</a>
+        <input type="submit" value="Send" onclick="return callmynow()">
+
     </div>
 
 
@@ -41,6 +42,10 @@
             window.document.location = 'tel:+232323';
         });
     });
+    function callmynow() {
+        window.location.href = "tel:+232323";
+        return false;
+    }
 </script>
 
 </main>
