@@ -13,17 +13,24 @@
         {{ .Content }}
     </div>
     <div>
-        <a href="callto:1234567">callto:1234567</a>
-        <a href="callto://1234567">callto://1234567</a>
-        <a href="tel:+15555551212">tel:+15555551212</a>
-        <a href="tel://15555551212">tel://15555551212</a>
+        <br><a href="callto:1234567">callto:1234567</a>
+        <br><a href="callto://1234567">callto://1234567</a>
+        <br><a href="tel:+15555551212">tel:+15555551212</a>
+        <br><a href="tel://15555551212">tel://15555551212</a>
 
-        <a href="tel:15145759454">+1 514-575-9454</a>
-        <span id="callButton" data-phone-number="+15145759454">+15145759454</span>
+        <br><a href="tel:15145759454">+1 514-575-9454</a>
+        <br><span id="callButton" data-phone-number="+15145759454">+15145759454</span>
 
-        <a href="tel:1-555-123-4567" class="call">
+        <br><a href="tel:1-555-123-4567" class="call">Foo</a>
             ----- OR -----
-            <a href="tel:15551234567" class="call">
+            <a href="tel:5551234567" class="call">bar</a>
+
+    </div>
+    <div>
+        <br><a class="font-13 color-theme" onclick="window.open('tel:+84935002102');">Call</a>
+        <br><a href="tel:+18475555555">Click Here To Call Support 1-847-555-5555</a>
+        <br><a href="javascript:void(0)" onclick="window.location='tel:8005555555'" class="call">800 555 5555</a>
+
     </div>
     <div>
         <input type="submit" value="Send" onclick="return callmynow()">
