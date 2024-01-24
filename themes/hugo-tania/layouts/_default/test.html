@@ -13,33 +13,26 @@
         {{ .Content }}
     </div>
     <div>
-        <a href="tel://15145759454" target="_parent" data-phone-number="+15145759454" role="button" aria-label="Call" id="callButton">
-        <span class="S9460" aria-hidden="true">
-            <!-- SVG and other elements -->
-        </span>
-            <div class="JWyTcc">Call</div>
-        </a>
-        <a href="callto:1234567">Call 123-4567</a>
-        <p>A phone number: <a href="tel:1-408-555-5555">1-408-555-5555</a></p>
+        <a href="callto:1234567">callto:1234567</a>
+        <a href="callto://1234567">callto://1234567</a>
+        <a href="tel:+15555551212">tel:+15555551212</a>
+        <a href="tel://15555551212">tel://15555551212</a>
 
+        <a href="tel:15145759454">+1 514-575-9454</a>
+        <span id="callButton" data-phone-number="+15145759454">+15145759454</span>
+
+        <a href="tel:1-555-123-4567" class="call">
+            ----- OR -----
+            <a href="tel:15551234567" class="call">
     </div>
     <div>
         <input type="submit" value="Send" onclick="return callmynow()">
-        <input type="submit" value="Replace" onclick="return replacePhone()">
-
     </div>
     <div>
         <p>What is the name(s) of your browser?</p>
         <button onclick="myFunction()">Try it</button>
         <p id="demo"></p>
     </div>
-
-    <div>
-    <a href="tel://1-234-867-5309"  class="btn btn-success font-weight-light callus-btn py-2" title="Call us today!"><span class="text-uppercase">Call Us</span> <br>sdsdsdsd</a>
-    </div>
-
-
-
 
 </div>
 
