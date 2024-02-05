@@ -50,41 +50,16 @@
     }
 
 function callme() {
-        if (isGSA()) {
+        if (navigator.userAgent.indexOf("GSA") != -1) {
             window.open("tel:+15145759454");
         } else {
             window.location.href = "tel:+15145759454";
         }
-
 }
+function myFunction() {
 
-    function isGSA() {
-        if (navigator.userAgent.indexOf("GSA") != -1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-        function myFunction() {
-            if ((navigator.userAgent.indexOf("GSA") || navigator.userAgent.indexOf('OPR')) != -1) {
-                alert('Opera');
-            } else if (navigator.userAgent.indexOf("GSA") != -1) {
-                alert('Edge');
-            } else if (navigator.userAgent.indexOf("Chrome") != -1) {
-                alert('Chrome');
-            } else if (navigator.userAgent.indexOf("Safari") != -1) {
-                alert('Safari');
-            } else if (navigator.userAgent.indexOf("Firefox") != -1) {
-                alert('Firefox');
-            } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
-            {
-                alert('IE');
-            } else {
-                alert('unknown');
-            }
-
-
-    }
+    alert(navigator.userAgent);
+}
 </script>
 
 </main>
