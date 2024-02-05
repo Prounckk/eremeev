@@ -15,11 +15,8 @@
 
     <div>
         <br><a class="font-13 color-theme" onclick=callme()>Call</a>
-        <br><a class="font-13 color-theme" onclick="window.open('sms:+15145759454;?&body=hello.');">text</a>
+        <br><a class="font-13 color-theme" onclick=textme()>text</a>
 
-    </div>
-    <div>
-        <input type="submit" value="Send" onclick="return callmynow()">
     </div>
     <div>
         <p>What is the name(s) of your browser?</p>
@@ -30,24 +27,6 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var callButton = document.getElementById('callButton');
-
-        callButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            var phoneNumber = this.getAttribute('data-phone-number');
-            // Logic to initiate the call using the tel protocol
-            // window.document = 'tel:' + phoneNumber;
-            window.document.location = 'tel:+232323';
-        });
-    });
-    function callmynow() {
-        window.open( 'tel:800-888-1234', '_top' );
-    }
-
-    function replacePhone() {
-        location.replace("tel:+15145759454")
-    }
 
 function callme() {
         if (navigator.userAgent.indexOf("GSA") != -1) {
@@ -56,8 +35,14 @@ function callme() {
             window.location.href = "tel:+15145759454";
         }
 }
+function textme() {
+        if (navigator.userAgent.indexOf("GSA") != -1) {
+            window.open("sms:+15145759454;?&body=hello from the GSA side!");
+        } else {
+            window.location.href = "sms:+15145759454;?&body=hello from the other side!";
+        }
+}
 function myFunction() {
-
     alert(navigator.userAgent);
 }
 </script>
