@@ -13,7 +13,6 @@ repo = "https://github.com/prounckk/eremeev"
 [params.socialOptions]
 github = "https://github.com/prounckk"
 instagram = "https://www.instagram.com/prounckk/"
-linkedin = "https://www.linkedin.com/in/sergeeremeev/"
 twitter = "https://twitter.com/prounckk"
 
 [outputs]
