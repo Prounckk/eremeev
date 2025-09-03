@@ -31,7 +31,7 @@ jobs:
 
         # Step 5 - Publish the generated website to cloudflare Workers
       - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3
         env:
             USER: root
         with:
