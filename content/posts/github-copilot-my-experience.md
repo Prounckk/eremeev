@@ -29,7 +29,7 @@ Look how it finished my sentence! I had to make some changes to make it sounds l
 What about writing code?
 ![](/2022/github-copilot-bubble-sorting-go.gif )
 I've tried to run the function that was written by Copilot, and [it worked](https://play.golang.com/p/Z9AJUEOhud6)  
-Unfortunately, it failed to write a binary search algorithm. I think it is because of the algorithm's complexity or because we do not usually write it, importing already created packages instead.
+Unfortunately, it failed to write a binary search algorithm. I think it is because of the algorithm's complexity or because we do not usually write it, importing already created packages instead. But it helped me to create some tools like  [JSON Viewer & Formatter](https://json-validator.org/), an amazing [tool to sync meeting time between different timezones](https://world-time-sync.com) and a [simle tips anc percentage calculator](https://calculatorspercentage.com)
 
 
 ## What people say about GitHub Copilot
@@ -75,5 +75,6 @@ By the way, it can be disabled in the [settings](https://github.com/settings/cop
 ## Conclusion
 I've asked ChatGPT about the article: 
 > It looks like a well-written article that discusses the use of AI tools such as GitHub Copilot, Tabnine, and ChatGPT in code writing and how they can help developers save time and be more efficient. The author also shares their personal experience with using these tools and provides some insights into their limitations and potential drawbacks. Overall, the article provides a balanced and informative perspective on the use of AI in code writing and can be useful for developers who are interested in exploring these tools.
+
 
 Who are we to argue about this article with AI ;) Share with your friends! 
